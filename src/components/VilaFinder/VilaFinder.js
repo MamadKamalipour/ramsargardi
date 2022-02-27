@@ -5,16 +5,7 @@ import CustomRadioButton1 from "../CustomRadioButton1/CustomRadioButton1";
 import backgroundImage from "../assets/image/ramsar.jpg";
 import Hero from "../Hero/Hero";
 // date imports
-import "react-dates/initialize";
-import moment from "moment";
-import momentJalaali from "moment-jalaali";
-import DirectionProvider, {
-  DIRECTIONS,
-} from "react-with-direction/dist/DirectionProvider";
 
-import DateRangePickerWrapper from "../DatePickerComp/dist/examples/DateRangePickerWrapper";
-import "react-dates/lib/css/_datepicker.css";
-import "../DatePickerComp/DatePickerComp.scss";
 import "./VilaFinder.scss";
 const vilatypes = [
   {
@@ -80,20 +71,7 @@ const VilaFinder = () => {
   });
   const [peopleNumValue, setPeopleNumValue] = useState("");
 
-  // moment
-  moment.locale("fa");
-  momentJalaali.loadPersian({
-    dialect: "persian-modern",
-    usePersianDigits: true,
-  });
-
-  const DateChangeHandler = ({ startDate, endDate }) => {
-    setDate({
-      // ...date,
-      startDate: startDate,
-      endDate: endDate,
-    });
-  };
+ 
   const onSubmitHandler = (e) => {
     e.preventDefault();
     console.log({ customDropDownValue, vilatype, date, peopleNumValue });
@@ -133,25 +111,7 @@ const VilaFinder = () => {
               onValueChange={onVilaTypeChange}
             />
             {/* date */}
-            <DirectionProvider direction={DIRECTIONS.RTL}>
-              <DateRangePickerWrapper
-                DateChangeHandler={DateChangeHandler}
-                isRTL
-                initialStartDate={date.startDate}
-                initialEndDate={date.endDate}
-                anchorDirection="right"
-                showDefaultInputIcon
-                hideKeyboardShortcutsPanel
-                showClearDates
-                stateDateWrapper={momentJalaali}
-                startDatePlaceholderText="تاریخ شروع"
-                endDatePlaceholderText="تاریخ پایان"
-                renderMonthText={(month) =>
-                  momentJalaali(month).format("jMMMM jYYYY")
-                }
-                renderDayContents={(day) => momentJalaali(day).format("jD")}
-              />
-            </DirectionProvider>
+
             {/* People */}
             <CustomRadioButton1
               data={peopleNum}

@@ -8,7 +8,7 @@ const CustomRadioButton1 = ({
   label,
   mainColor,
   value,
-  onValueChange
+  onValueChange,
 }) => {
   // styles
   const Residencetype = styled.div`
@@ -39,11 +39,11 @@ const CustomRadioButton1 = ({
     width: 100%;
     margin-top: 10px;
     background-color: transparent;
-    label {
+    & .col-sm {
       border: 1px solid #333;
-      &:not(:last-child) {
-        border: 0;
-      }
+    }
+
+    label {
       padding: 1rem 2rem;
       font-size: 80%;
       cursor: pointer;
@@ -71,7 +71,7 @@ const CustomRadioButton1 = ({
         <Row>
           {data.length < 5
             ? data.map((item) => (
-                <Col sm className="p-0" key={item.value}>
+                <Col sm md className="p-0" key={item.value}>
                   <label
                     style={
                       value === item.value ? { backgroundColor: mainColor } : {}
