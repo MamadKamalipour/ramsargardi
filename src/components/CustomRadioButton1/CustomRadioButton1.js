@@ -8,7 +8,7 @@ const CustomRadioButton1 = ({
   label,
   mainColor,
   value,
-  onValueChange,
+  onValueChange
 }) => {
   // styles
   const Residencetype = styled.div`
