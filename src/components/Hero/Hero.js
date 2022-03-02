@@ -3,9 +3,9 @@ import styled from "styled-components";
 
 const Hero = ({ children, background, overlayColor }) => {
   const HeroSection = styled.div`
+    position: relative;
     width: 100%;
     height: 100vh;
-    position: relative;
     background-image: ${(props) => `url(${background})`};
     background-size: cover;
     background-position: 50% 50%;
@@ -19,6 +19,7 @@ const Hero = ({ children, background, overlayColor }) => {
     color: #ffff;
     background-color: ${overlayColor};
   `;
+  console.log("hero rendered");
   return (
     <HeroSection>
       <HeroSectionOverlay>{children}</HeroSectionOverlay>
