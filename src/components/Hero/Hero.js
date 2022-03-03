@@ -5,10 +5,11 @@ const Hero = ({ children, background, overlayColor }) => {
   const HeroSection = styled.div`
     position: relative;
     width: 100%;
-    height: 100vh;
-    background-image: ${(props) => `url(${background})`};
+    min-height: 100vh;
+    background-image: ${(props) => `url(${props.background})`};
     background-size: cover;
     background-position: 50% 50%;
+    /* margin-top: 50px; */
   `;
   const HeroSectionOverlay = styled.div`
     position: absolute;
@@ -19,9 +20,8 @@ const Hero = ({ children, background, overlayColor }) => {
     color: #ffff;
     background-color: ${overlayColor};
   `;
-  console.log("hero rendered");
   return (
-    <HeroSection>
+    <HeroSection background={background}>
       <HeroSectionOverlay>{children}</HeroSectionOverlay>
     </HeroSection>
   );

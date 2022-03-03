@@ -150,7 +150,7 @@ const VilaFinder = () => {
             <span className="search-label" s>
               جستجو
             </span>
-            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <i className="fa-solid fa-magnifying-glass search-icon"></i>
           </button>
         </div>
       </form>
