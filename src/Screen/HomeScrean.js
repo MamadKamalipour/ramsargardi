@@ -7,8 +7,10 @@ import TopNavBanner from "../components/TopNavBanner/TopNavBanner";
 import Header from "../components/Header/Header";
 import CustomButton from "../components/CustomButton/CustomButton";
 import FlippableCard from "../components/FlippableCard/FlippableCard";
+import Banner from "../components/Banner/Banner"
 //other
-import topBanner from "../assets/image/topbanner.jpg";
+import topBanner from "../assets/image/topnavbanner.jpg";
+import bannerImage from "../assets/image/banner.jpg"
 import Logo from "../assets/image/logo.png";
 import backgroundImage from "../assets/image/ramsar.jpg";
 import { ThemeContext } from "../context/ThemeContextProvider";
@@ -113,6 +115,7 @@ const HomeScrean = () => {
               backgroundImage={card.backgroundImage}
             />
           ))}
+          <Banner className="my-2 pb-3" image={bannerImage} link="https://www.google.com"/>
         </section>
       </div>
     </div>
