@@ -4,9 +4,9 @@ const FlippableCard = ({
   frontIcon,
   frontTitle,
   frontDesc,
-  backIcon,
-  backTitle,
-  backDesc,
+  // backIcon,
+  // backTitle,
+  // backDesc,
   backgroundImage,
   backgroundImageOverlay,
   status, // top , center , bottom
@@ -29,10 +29,10 @@ const FlippableCard = ({
               <h3> {frontTitle}</h3>
               <p>{frontDesc}</p>
             </div>
-            <div className="card__face card__face--back">
+            {/* <div className="card__face card__face--back">
               <h3> {backTitle}</h3>
               <p>{backDesc}</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
