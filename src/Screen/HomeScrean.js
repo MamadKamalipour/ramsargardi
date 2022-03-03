@@ -18,15 +18,15 @@ const HomeScrean = () => {
     <div className="theme" data-scheme={theme}>
       <div className="home-page">
         <TopNavBanner image={topBanner} alt="topbanner" />
-        <Header logo={Logo} isSticky={true} />
+        <Header logo={Logo} isSticky={false} />
         <Hero background={backgroundImage} overlayColor="rgba(0, 0, 0, 0.65)">
           <div className="container-fluid">
-            <div className="row justify-content-md-center justify-content-lg-space-evenly align-items-center ">
+            <div className="row justify-content-md-center justify-content-lg-around align-items-center ">
               <div className="col-12 col-md-5 col-lg-4 ">
                 <VilaFinder />
               </div>
-              <div className="col-12 col-md-5 col-lg-4 ms-5 mt-3 mt-md-0">
-                <div className="content-wrapper py-5">
+              <div className="col-12 col-md-5 col-lg-4 mt-3 mt-md-0">
+                <div className="content-wrapper text-center text-lg-start py-5">
                   <Heading>رامسرگردی</Heading>
                   <p>
                     لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
@@ -35,7 +35,7 @@ const HomeScrean = () => {
                   </p>
                   <CustomButton
                     type={"customBtn"}
-                    onClickHandler
+                    // onClickHandler
                     text="مشاهده ویلا ها"
                     btnWidth
                     csColor="#333"

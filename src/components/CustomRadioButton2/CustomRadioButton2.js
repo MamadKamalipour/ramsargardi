@@ -9,8 +9,8 @@ const CustomRadioButton2 = ({
   backgroundColor,
   boxShadow,
   ActiveColor,
-  onHoverBackground,
-  onHoverColor,
+  hoverBackground,
+  hoverColor,
   value,
   onValueChange,
 }) => {
@@ -27,8 +27,8 @@ const CustomRadioButton2 = ({
       box-shadow: ${(props) => props.boxShadow};
     }
     &.radioButtons__name:hover {
-      color: ${(props) => props.onHoverColor};
-      background-color: ${(props) => props.onHoverBackground};
+      color: ${(props) => props.hoverColor};
+      background-color: ${(props) => props.hoverBackground};
     }
   `;
 
@@ -64,8 +64,8 @@ const CustomRadioButton2 = ({
                   backgroundColor={backgroundColor}
                   ActiveColor={ActiveColor}
                   boxShadow={boxShadow}
-                  onHoverColor={onHoverColor}
-                  onHoverBackground={onHoverBackground}
+                  hoverColor={hoverColor}
+                  hoverBackground={hoverBackground}
                 >
                   {item.type}
                 </LabelEl>

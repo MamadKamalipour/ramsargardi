@@ -4,6 +4,7 @@ import CustomDropDown1 from "../CustomDropDown1/CustomDropDown1";
 import CustomRadioButton2 from "../CustomRadioButton2/CustomRadioButton2";
 import DateRangePicker from "../DateRangePicker";
 import moment from "jalali-moment";
+import CustomButton from "../CustomButton/CustomButton";
 const vilatypes = [
   {
     id: "1",
@@ -97,7 +98,7 @@ const VilaFinder = () => {
   return (
     <>
       <form onSubmit={onSubmitHandler} className="vilaFinder">
-        <div className="vilaFinder__wrapper">
+        <div className="vilaFinder__wrapper ">
           {/* Location */}
           <CustomDropDown1
             data={cities}
@@ -142,16 +143,23 @@ const VilaFinder = () => {
             onHoverBackground="red"
             onHoverColor="#fff"
           />
-          <button
-            type="submit"
-            class="btn btn-outline-dark d-flex justify-content-center align-items-center"
-            style={{ marginRight: "1rem", marginBottom: "10px" }}
-          >
-            <span className="search-label" s>
-              جستجو
-            </span>
-            <i className="fa-solid fa-magnifying-glass search-icon"></i>
-          </button>
+          <CustomButton
+            type="customBtn"
+            style={{
+              marginRight: "1rem",
+              marginBottom: "10px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+            icon="fa-solid fa-magnifying-glass search-icon"
+            text="جستجو"
+            hoverColor="#fff"
+            csColor="#fff"
+            csBgColor="rgb(112 112 112 / 85%)"
+            csBorderColor="#fff "
+            csOnFocusBoxShadow=""
+          />
         </div>
       </form>
     </>

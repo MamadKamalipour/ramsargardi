@@ -5,11 +5,13 @@ const Hero = ({ children, background, overlayColor }) => {
   const HeroSection = styled.div`
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     background-image: ${(props) => `url(${props.background})`};
     background-size: cover;
     background-position: 50% 50%;
-    /* margin-top: 50px; */
+    @media (max-width: 767px) {
+      height: 150vh;
+    }
   `;
   const HeroSectionOverlay = styled.div`
     position: absolute;

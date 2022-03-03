@@ -11,6 +11,8 @@ const CustomButton = ({
   csBgColor,
   csBorderColor,
   csOnFocusBoxShadow,
+  style,
+  hoverColor
 }) => {
   const PrimaryBtn = styled.button`
     width: ${(props) => props.btnWidth};
@@ -28,7 +30,6 @@ const CustomButton = ({
   `;
   const SecondaryBtn = styled.button`
     width: ${(props) => props.btnWidth};
-
     &.secondary {
       color: #fff;
       background-color: #6c757d;
@@ -72,6 +73,7 @@ const CustomButton = ({
   const CustomBtn = styled.button`
     width: ${(props) => props.btnWidth};
     &.custom-color {
+      transition: all .5s linear;
       color: ${(props) => props.csColor};
       background-color: ${(props) => props.csBgColor};
       border-color: ${(props) => props.csBorderColor};
@@ -80,6 +82,10 @@ const CustomButton = ({
       }
       &:focus {
         box-shadow: ${(props) => props.csOnFocusBoxShadow};
+      }
+      &:hover{
+        opacity: .9;
+        color: ${props=>props.hoverColor};
       }
     }
   `;
@@ -135,6 +141,8 @@ const CustomButton = ({
           csBgColor={csBgColor}
           csBorderColor={csBorderColor}
           csOnFocusBoxShadow={csOnFocusBoxShadow}
+          hoverColor={hoverColor}
+          style={style}
         >
           <i className={icon}></i>
           {text}
