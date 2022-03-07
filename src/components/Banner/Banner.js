@@ -4,7 +4,7 @@ const Banner = ({ link, image,className }) => {
   const BannerEl = styled.div`
     width: 100%;
     margin: 0 auto;
-    padding: 0 16px;
+    padding: 0;
     max-width: 1400px;
     & a {
       text-decoration: none;

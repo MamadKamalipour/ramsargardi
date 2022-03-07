@@ -3,16 +3,16 @@ import styled from "styled-components";
 import CustomButton from "../CustomButton/CustomButton";
 const Header = ({ logo, isSticky }) => {
   const HeaderEl = styled.header`
-    margin-top: 50px;
     padding-left: 1rem;
     padding-right: 1rem;
     background-color: #fff;
-    &.sticky {
-      position: sticky;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 2;
+    margin: 50px 0 0 0  ;
+    &.sticky{
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999 ;
     }
   `;
   const Logo = styled.img`
