@@ -10,6 +10,7 @@ import FlippableCard from "../components/FlippableCard/FlippableCard";
 import Banner from "../components/Banner/Banner";
 import VilaCard from "../components/VilaCard/VilaCard";
 import Slider from "../components/Slider/Slider";
+import BlogCard from "../components/BlogCard/BlogCard";
 //other
 import topBanner from "../assets/image/topnavbanner.jpg";
 import bannerImage from "../assets/image/banner.jpg";
@@ -238,6 +239,32 @@ const HomeScrean = () => {
       discountPresentage: 20,
     },
   ];
+  const blogData = [
+    {
+      id: 1,
+      image:
+        "https://i.picsum.photos/id/1005/5760/3840.jpg?hmac=2acSJCOwz9q_dKtDZdSB-OIK1HUcwBeXco_RMMTUgfY",
+      title: "پست بلاگ آزمایشی",
+      description:
+        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و ",
+    },
+    {
+      id: 2,
+      image:
+        "https://i.picsum.photos/id/237/200/300.jpg?hmac=TmmQSbShHz9CdQm0NkEjx1Dyh_Y984R9LpNrpvH2D_U",
+      title: "پست بلاگ آزمایشی",
+      description:
+        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و ",
+    },
+    {
+      id: 3,
+      image:
+        "https://i.picsum.photos/id/572/536/354.jpg?hmac=LH_xl3VtYKAAEcOQJpsrPecFrg-hDX3wQGexX5mmINM",
+      title: "پست بلاگ آزمایشی",
+      description:
+        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و ",
+    },
+  ];
   return (
     <div className="theme" data-scheme={theme}>
       <div className="home-page container-fluid m-0 p-0">
@@ -293,21 +320,330 @@ const HomeScrean = () => {
             link="https://www.google.com"
           />
         </section>
-        <section className="vilaSlider container py-4"
-            style={{ direction: "ltr" }}
+        <section
+          className="vilaSlider container py-4"
+          style={{ direction: "ltr" }}
+        >
+          <Heading
+            tag="h5"
+            className="slider-title text-right text-bold mb-4 ps-3"
           >
-            <Heading
-              tag="h5"
-              className="slider-title text-right text-bold mb-4 ps-3"
-            >
-              پرطرفدار ترین ویلا ها
-            </Heading>
-            <Slider>
-              {vilaData.map((vila) => (
-                <VilaCard data={vila} gallery={vila.gallery} key={vila.id} />
-              ))}
-            </Slider>
-          </section>
+            پرطرفدار ترین ویلا ها
+          </Heading>
+          <Slider
+            additionalTransfrom={0}
+            arrows={false}
+            centerMode={false}
+            className="slider-custom"
+            containerClass="container-with-dots"
+            dotListClass="dot-custom"
+            customTransition="all 1s linear"
+            draggable
+            focusOnSelect={false}
+            partialVisible
+            itemClass=""
+            keyBoardControl
+            minimumTouchDrag={80}
+            renderButtonGroupOutside={false}
+            renderDotsOutside={false}
+            responsive={{
+              desktop: {
+                breakpoint: {
+                  max: 3000,
+                  min: 1024,
+                },
+                items: 4,
+                partialVisibilityGutter: 40,
+              },
+              mobile: {
+                breakpoint: {
+                  max: 464,
+                  min: 0,
+                },
+                items: 1,
+                partialVisibilityGutter: 30,
+              },
+              tablet: {
+                breakpoint: {
+                  max: 1024,
+                  min: 464,
+                },
+                items: 2,
+                partialVisibilityGutter: 30,
+              },
+            }}
+            showDots={false}
+            sliderClass=""
+            slidesToSlide={1}
+            swipeable
+          >
+            {vilaData.map((vila) => (
+              <VilaCard data={vila} gallery={vila.gallery} key={vila.id} />
+            ))}
+          </Slider>
+        </section>
+        <section className="container-fluid p-0">
+          <Banner
+            className=""
+            image={bannerImage}
+            link="https://www.google.com"
+          />
+        </section>
+        <section
+          className="vilaSlider container py-4"
+          style={{ direction: "ltr" }}
+        >
+          <Heading
+            tag="h5"
+            className="slider-title text-right text-bold mb-4 ps-3"
+          >
+            سوییت و آپارتمان
+          </Heading>
+          <Slider
+            additionalTransfrom={0}
+            arrows={false}
+            centerMode={false}
+            className="slider-custom"
+            containerClass="container-with-dots"
+            dotListClass="dot-custom"
+            customTransition="all 1s linear"
+            draggable
+            focusOnSelect={false}
+            partialVisible
+            itemClass=""
+            keyBoardControl
+            minimumTouchDrag={80}
+            renderButtonGroupOutside={false}
+            renderDotsOutside={false}
+            responsive={{
+              desktop: {
+                breakpoint: {
+                  max: 3000,
+                  min: 1024,
+                },
+                items: 4,
+                partialVisibilityGutter: 40,
+              },
+              mobile: {
+                breakpoint: {
+                  max: 464,
+                  min: 0,
+                },
+                items: 1,
+                partialVisibilityGutter: 30,
+              },
+              tablet: {
+                breakpoint: {
+                  max: 1024,
+                  min: 464,
+                },
+                items: 2,
+                partialVisibilityGutter: 30,
+              },
+            }}
+            showDots={false}
+            sliderClass=""
+            slidesToSlide={1}
+            swipeable
+          >
+            {vilaData.map((vila) => (
+              <VilaCard data={vila} gallery={vila.gallery} key={vila.id} />
+            ))}
+          </Slider>
+        </section>
+        <section className="container-fluid p-0">
+          <Banner
+            className=""
+            image={bannerImage}
+            link="https://www.google.com"
+          />
+        </section>
+        <section
+          className="vilaSlider container py-4"
+          style={{ direction: "ltr" }}
+        >
+          <Heading
+            tag="h5"
+            className="slider-title text-right text-bold mb-4 ps-3"
+          >
+            جذاب‌ترین اقامتگاه‌های رامسر
+          </Heading>
+          <Slider
+            additionalTransfrom={0}
+            arrows={false}
+            centerMode={false}
+            className="slider-custom"
+            containerClass="container-with-dots"
+            dotListClass="dot-custom"
+            customTransition="all 1s linear"
+            draggable
+            focusOnSelect={false}
+            partialVisible
+            itemClass=""
+            keyBoardControl
+            minimumTouchDrag={80}
+            renderButtonGroupOutside={false}
+            renderDotsOutside={false}
+            responsive={{
+              desktop: {
+                breakpoint: {
+                  max: 3000,
+                  min: 1024,
+                },
+                items: 4,
+                partialVisibilityGutter: 40,
+              },
+              mobile: {
+                breakpoint: {
+                  max: 464,
+                  min: 0,
+                },
+                items: 1,
+                partialVisibilityGutter: 30,
+              },
+              tablet: {
+                breakpoint: {
+                  max: 1024,
+                  min: 464,
+                },
+                items: 2,
+                partialVisibilityGutter: 30,
+              },
+            }}
+            showDots={false}
+            sliderClass=""
+            slidesToSlide={1}
+            swipeable
+          >
+            {vilaData.map((vila) => (
+              <VilaCard data={vila} gallery={vila.gallery} key={vila.id} />
+            ))}
+          </Slider>
+        </section>
+        <section className="container-fluid p-0">
+          <Banner
+            className=""
+            image={bannerImage}
+            link="https://www.google.com"
+          />
+        </section>
+        <section
+          className="vilaSlider container py-4"
+          style={{ direction: "ltr" }}
+        >
+          <Heading
+            tag="h5"
+            className="slider-title text-right text-bold mb-4 ps-3"
+          >
+            کلبه های خاص
+          </Heading>
+          <Slider
+            additionalTransfrom={0}
+            arrows={false}
+            centerMode={false}
+            className="slider-custom"
+            containerClass="container-with-dots"
+            dotListClass="dot-custom"
+            customTransition="all 1s linear"
+            draggable
+            focusOnSelect={false}
+            partialVisible
+            itemClass=""
+            keyBoardControl
+            minimumTouchDrag={80}
+            renderButtonGroupOutside={false}
+            renderDotsOutside={false}
+            responsive={{
+              desktop: {
+                breakpoint: {
+                  max: 3000,
+                  min: 1024,
+                },
+                items: 4,
+                partialVisibilityGutter: 40,
+              },
+              mobile: {
+                breakpoint: {
+                  max: 464,
+                  min: 0,
+                },
+                items: 1,
+                partialVisibilityGutter: 30,
+              },
+              tablet: {
+                breakpoint: {
+                  max: 1024,
+                  min: 464,
+                },
+                items: 2,
+                partialVisibilityGutter: 30,
+              },
+            }}
+            showDots={false}
+            sliderClass=""
+            slidesToSlide={1}
+            swipeable
+          >
+            {vilaData.map((vila) => (
+              <VilaCard data={vila} gallery={vila.gallery} key={vila.id} />
+            ))}
+          </Slider>
+        </section>
+        <section
+          className="blog-section container w-50 py-4"
+          style={{ direction: "ltr" }}
+        >
+          <Slider
+            additionalTransfrom={0}
+            arrows={true}
+            autoPlaySpeed={10000}
+            centerMode={false}
+            className=""
+            containerClass="container-with-dots"
+            dotListClass=""
+            focusOnSelect={false}
+            infinite
+            itemClass=""
+            keyBoardControl
+            minimumTouchDrag={80}
+            renderButtonGroupOutside={false}
+            renderDotsOutside={false}
+            responsive={{
+              desktop: {
+                breakpoint: {
+                  max: 3000,
+                  min: 1024,
+                },
+                items: 1,
+                partialVisibilityGutter: 40,
+              },
+              mobile: {
+                breakpoint: {
+                  max: 464,
+                  min: 0,
+                },
+                items: 1,
+                partialVisibilityGutter: 30,
+              },
+              tablet: {
+                breakpoint: {
+                  max: 1024,
+                  min: 464,
+                },
+                items: 1,
+                partialVisibilityGutter: 30,
+              },
+            }}
+            showDots={false}
+            sliderClass=""
+            slidesToSlide={1}
+            swipeable
+          >
+            {blogData.map((blog) => (
+              <BlogCard data={blog} key={blog.id} />
+            ))}
+          </Slider>
+        </section>
       </div>
     </div>
   );

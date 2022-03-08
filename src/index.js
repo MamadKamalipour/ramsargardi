@@ -4,7 +4,6 @@ import App from "./App";
 import 'bootstrap/dist/css/bootstrap-grid.rtl.min.css';
 import 'bootstrap/dist/css/bootstrap-utilities.rtl.min.css';
 import 'bootstrap/dist/css/bootstrap.rtl.min.css';
-import "react-multi-carousel/lib/styles.css";
 import "./assets/fontawesome/pro/css/all.min.css"
 import "./assets/fonts/font-style.css"
 import "./styles/global.css";
