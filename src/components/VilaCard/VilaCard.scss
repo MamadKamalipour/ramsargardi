@@ -1,13 +1,4 @@
 .card {
-  direction: rtl;
-  max-width: 300px;
-  max-height: 500px;
-  border-radius: 5px;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-  position: relative;
-  margin-left: .2rem;
-  margin-right: .2rem;
   &__header {
     direction: ltr;
     width: 100%;

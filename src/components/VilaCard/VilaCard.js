@@ -1,11 +1,23 @@
 import React from "react";
 import starSvg from "../../assets/image/star.svg";
 import Carousel from "react-multi-carousel";
+import styled from "styled-components";
 import "./VilaCard.scss";
 const VilaCard = ({ data, gallery }) => {
+  const CardWrapper = styled.div`
+    direction: rtl;
+    max-width: 300px;
+    max-height: 500px;
+    border-radius: 5px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    position: relative;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+  `;
   return (
     <>
-      <div className="card" key={data.id}>
+      <CardWrapper key={data.id}>
         <div className="card__header">
           <div className="card__header__badges">
             {data.isVerified && (
@@ -103,7 +115,7 @@ const VilaCard = ({ data, gallery }) => {
             )}
           </div>
         </div>
-      </div>
+      </CardWrapper>
     </>
   );
 };

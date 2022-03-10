@@ -2,6 +2,7 @@
 
 # dependencies
 node_modules
+Todos.md
 /.pnp
 .pnp.js
 src/assets/fontawesome

@@ -1,12 +1,14 @@
-import React, { useContext } from "react";
-import { ThemeContext } from "../context/ThemeContextProvider";
-const AdminPanel = () => {
-  const { theme } = useContext(ThemeContext);
+import React, { Suspense } from "react";
+import { Provider } from "react-redux";
+import store from "../AdminPanel/store";
+import { Route, Routes , Outlet } from "react-router-dom";
 
+
+const AdminPanel = () => {
   return (
-    <div className="theme" data-scheme={theme}>
-        this is admin panel
-    </div>
+    <Provider store={store}>
+      <Outlet />
+    </Provider>
   );
 };
 
