@@ -26,7 +26,7 @@ function ProductsTags() {
         {tags.map((tag) => (
           <CTableRow key={tag.id}>
             <CTableHeaderCell scope="row">{tag.id}</CTableHeaderCell>
-            <CTableDataCell>{tag.name}</CTableDataCell>
+            <CTableDataCell>{tag.label}</CTableDataCell>
             <CTableDataCell>{tag.products}</CTableDataCell>
             <CTableDataCell>
               <CButton color="warning" className="me-2">
