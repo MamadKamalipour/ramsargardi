@@ -1,13 +1,18 @@
-import React, { Suspense } from "react";
+import React from "react";
 import { Provider } from "react-redux";
 import store from "../AdminPanel/store";
-import { Route, Routes , Outlet } from "react-router-dom";
-
+import { Outlet } from "react-router-dom";
+import ProductsContextProvider from "../AdminPanel/context/ProductsContextProvider";
+import UserContextProvider from "../AdminPanel/context/UserContextProvider";
 
 const AdminPanel = () => {
   return (
     <Provider store={store}>
-      <Outlet />
+      <UserContextProvider>
+        <ProductsContextProvider>
+          <Outlet />
+        </ProductsContextProvider>
+      </UserContextProvider>
     </Provider>
   );
 };

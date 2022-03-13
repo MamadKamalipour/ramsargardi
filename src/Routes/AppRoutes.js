@@ -21,9 +21,6 @@ const Page500 = React.lazy(() =>
   import("../AdminPanel/views/pages/page500/Page500")
 );
 
-const Test = () => {
-  return <h1>hi this is AdminPanel</h1>;
-};
 const loading = (
   <div className="pt-3 text-center">
     <div className="sk-spinner sk-spinner-pulse"></div>

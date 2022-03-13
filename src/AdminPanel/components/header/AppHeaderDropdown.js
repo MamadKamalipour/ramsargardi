@@ -52,7 +52,7 @@ const AppHeaderDropdown = () => {
           <CIcon icon={cilUser} className="me-2" />
           پروفایل
         </CDropdownItem>
-        <CDropdownItem href="/settings">
+        <CDropdownItem href="/administrator/settings">
           <CIcon icon={cilSettings} className="me-2" />
           تنظیمات
         </CDropdownItem>
