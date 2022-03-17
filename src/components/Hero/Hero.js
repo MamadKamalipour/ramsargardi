@@ -1,14 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 
-const Hero = ({ children, background, overlayColor }) => {
+const Hero = ({ children, background, overlayColor,className }) => {
   const HeroSection = styled.div`
+    position: relative;
     width: 100%;
     height: 100vh;
-    position: relative;
-    background-image: ${(props) => `url(${background})`};
+    min-height: 700px;
+    background-image: ${(props) => `url(${props.background})`};
     background-size: cover;
     background-position: 50% 50%;
+    @media (max-width: 767px) {
+      height: 150vh;
+    }
   `;
   const HeroSectionOverlay = styled.div`
     position: absolute;
@@ -20,7 +24,7 @@ const Hero = ({ children, background, overlayColor }) => {
     background-color: ${overlayColor};
   `;
   return (
-    <HeroSection>
+    <HeroSection background={background} className={className}> 
       <HeroSectionOverlay>{children}</HeroSectionOverlay>
     </HeroSection>
   );

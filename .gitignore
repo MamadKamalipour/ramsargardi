@@ -2,9 +2,10 @@
 
 # dependencies
 node_modules
+Todos.md
 /.pnp
 .pnp.js
-src/components/assets/fontawesome
+src/assets/fontawesome
 # testing
 /coverage
 
