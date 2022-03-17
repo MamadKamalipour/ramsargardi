@@ -4,13 +4,16 @@ import store from "../AdminPanel/store";
 import { Outlet } from "react-router-dom";
 import ProductsContextProvider from "../AdminPanel/context/ProductsContextProvider";
 import UserContextProvider from "../AdminPanel/context/UserContextProvider";
+import BlogContextProvider from "../AdminPanel/context/BlogContextProvider";
 
-const AdminPanel = () => {
+const AdminPanel = (props) => {
   return (
     <Provider store={store}>
       <UserContextProvider>
         <ProductsContextProvider>
-          <Outlet />
+          <BlogContextProvider>
+            <Outlet {...props} />
+          </BlogContextProvider>
         </ProductsContextProvider>
       </UserContextProvider>
     </Provider>

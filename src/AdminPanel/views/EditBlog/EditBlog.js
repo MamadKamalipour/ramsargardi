@@ -7,12 +7,15 @@ import {
 } from "@coreui/react";
 import React, { useState, useContext } from "react";
 import MultiImageInput from "react-multiple-image-input";
-import { ProductsContext } from "../../context/ProductsContextProvider";
+import { BlogContext } from "../../context/BlogContextProvider";
 import CustomDropDown1 from "../../../components/CustomDropDown1/CustomDropDown1";
 import * as Yup from "yup";
 import { Formik, Form } from "formik";
-function AddProducts() {
-  const { categories, tags } = useContext(ProductsContext);
+import { useParams } from "react-router-dom";
+function EditBlog() {
+  const { blog } = useContext(BlogContext);
+  const { id } = useParams();
+  const selectedBlog = blog.find((blog) => blog._id === id);
   const crop = {
     unit: "%",
     aspect: 16 / 9,
@@ -21,31 +24,33 @@ function AddProducts() {
 
   const [formVal, setformVal] = useState({
     images: {},
-    categorySelect: {
-      label: "دسته بندی ها...",
-      value: "",
-    },
-    tagSelect: "",
-    productName: "",
-    productPrice: "",
-    description: "",
+    categorySelect: selectedBlog.tags.map((tag) => ({
+      label: tag,
+      value: tag,
+    })),
+    tagSelect: selectedBlog.tags.map((tag) => ({ label: tag, value: tag })),
+    productName: selectedBlog.title,
+    productPrice: selectedBlog.price,
+    description: selectedBlog.description,
   });
   const submitHandler = (values) => {
-    console.log(values)
-    fetch("https://fakestoreapi.com/products", {
-      method: "POST",
-      body: JSON.stringify(values),
-    })
-      .then((res) => res.json())
-      .then((json) => console.log(json));
+    console.log(values);
+    try {
+      fetch(`https://fakestoreapi.com/products/${id}`, {
+        method: "PUT",
+        body: JSON.stringify(values),
+      })
+        .then((res) => res.json())
+        .then((json) => console.log(json));
+    } catch (error) {
+      console.log(error);
+    }
   };
   // form Validate
   const Validate = Yup.object({
     productName: Yup.string().max(24, "نام بسیار طولانی است!"),
-    productPrice: Yup.number(),
     description: Yup.string(),
   });
-
   return (
     <Formik
       validationSchema={Validate}
@@ -62,9 +67,11 @@ function AddProducts() {
               <div className="col-12">
                 <MultiImageInput
                   images={formik.values.images}
-                  setImages={(images) => formik.setValues({ ...formik.values, images })}
+                  setImages={(images) =>
+                    formik.setValues({ ...formik.values, images })
+                  }
                   allowCrop={true}
-                  max={5}
+                  max={1}
                   theme="light"
                   cropConfig={{ crop, ruleOfThirds: true }}
                 />
@@ -77,27 +84,15 @@ function AddProducts() {
                   <CFormInput
                     type="text"
                     id="productName"
-                    placeholder="مثال: خانه ویلایی"
                     value={formik.values.productName}
                     onChange={(e) => {
-                      formik.setValues({ ...formik.values, productName: e.target.value });
+                      formik.setValues({
+                        ...formik.values,
+                        productName: e.target.value,
+                      });
                     }}
                   />
-                  <CFormLabel htmlFor="productName">نام محصول</CFormLabel>
-                </CFormFloating>
-              </div>
-              <div className="col-6">
-                <CFormFloating className="mb-3">
-                  <CFormInput
-                    type="text"
-                    id="productPrice"
-                    placeholder="مثال: 200000"
-                    value={formik.values.productPrice.toLocaleString('fa-IR')}
-                    onChange={(e) => {
-                      formik.setValues({ ...formik.values, productPrice: e.target.value });
-                    }}
-                  />
-                  <CFormLabel htmlFor="productPrice">قیمت</CFormLabel>
+                  <CFormLabel htmlFor="productName">نام بلاگ</CFormLabel>
                 </CFormFloating>
               </div>
             </div>
@@ -105,25 +100,28 @@ function AddProducts() {
             <div className="row">
               <div className="col-6">
                 <CustomDropDown1
-                  data={categories}
+                  data={blog.tags}
                   type="single"
                   name="category"
                   label="انتخاب دسته بندی"
                   value={formik.values.categorySelect}
                   onValueChange={(category) => {
-                    formik.setValues({ ...formik.values, categorySelect: category });
+                    formik.setValues({
+                      ...formik.values,
+                      categorySelect: category,
+                    });
                   }}
                 />
               </div>
               <div className="col-6">
                 <CustomDropDown1
-                  data={tags}
+                  data={blog.tags}
                   type="multi"
                   name="category"
-                  label="انتخاب دسته بندی"
+                  label="انتخاب برچسب"
                   value={formik.values.tagSelect}
                   onValueChange={(tags) => {
-                    formik.setValues({  ...formik.values, tagSelect: tags });
+                    formik.setValues({ ...formik.values, tagSelect: tags });
                   }}
                 />
               </div>
@@ -137,7 +135,10 @@ function AddProducts() {
                     placeholder="Leave a comment here"
                     value={formik.values.description}
                     onChange={(e) => {
-                      formik.setValues({  ...formik.values, description: e.target.value });
+                      formik.setValues({
+                        ...formik.values,
+                        description: e.target.value,
+                      });
                     }}
                   ></CFormTextarea>
                   <CFormLabel htmlFor="floatingTextarea">توضیحات</CFormLabel>
@@ -148,7 +149,7 @@ function AddProducts() {
             <div className="row mt-3">
               <div className="col-2">
                 <CButton type="submit" color="info">
-                  ثبت محصول
+                  بروزرسانی
                 </CButton>
               </div>
             </div>
@@ -159,4 +160,4 @@ function AddProducts() {
   );
 }
 
-export default AddProducts;
+export default EditBlog;

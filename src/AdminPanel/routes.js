@@ -81,6 +81,7 @@ const ProductsTags = React.lazy(() =>
   import("./views/ProductsTags/ProductsTags")
 );
 const Blog = React.lazy(() => import("./views/Blog/Blog"));
+const EditBlog = React.lazy(() => import("./views/EditBlog/EditBlog"));
 const AddBlog = React.lazy(() => import("./views/AddBlog/AddBlog"));
 const BlogCategory = React.lazy(() =>
   import("./views/BlogCategory/BlogCategory")
@@ -104,6 +105,7 @@ const routes = [
   },
   { path: "products/tags", name: "برچسب محصولات", element: ProductsTags },
   { path: "blog", name: "پست های بلاگ", element: Blog },
+  { path: "blog/:id", name: "ویرایش بلاگ", element: EditBlog },
   { path: "blog/add", name: "افزودن بلاگ", element: AddBlog },
   { path: "blog/categories", name: "دسته بندی بلاگ", element: BlogCategory },
   { path: "blog/tags", name: "برچسب های بلاگ", element: BlogTags },

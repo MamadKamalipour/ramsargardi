@@ -14,8 +14,19 @@ import {
 } from "@coreui/react";
 import { Link } from "react-router-dom";
 const Products = () => {
-  const { products } = useContext(ProductsContext);
+  const { products, setProducts } = useContext(ProductsContext);
   const placeHolederData = [1, 2, 3, 4, 5, 6, 7, 8];
+  const deletProductHandler = (e) => {
+    fetch(`https://fakestoreapi.com/products/${e.target.name}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((json) => {
+        console.log(json)
+        const selectedId = json.id;
+        setProducts(products.filter((item) => item.id !== selectedId));
+      });
+  };
   return (
     <>
       <CRow xs={{ cols: 1, gutter: 3 }} md={{ cols: 4 }}>
@@ -32,9 +43,15 @@ const Products = () => {
                   <CCardTitle>{titleShorten(item.title)}</CCardTitle>
                   <CCardText>{descriptionShorten(item.description)}</CCardText>
                   <CButton color="warning" className="me-2">
-                    <Link to={`${item.id}`}>ویرایش</Link>
+                    <Link style={{textDecoration:"none", color:"inherit" }} to={`${item.id}`}>ویرایش</Link>
                   </CButton>
-                  <CButton color="danger">پاک کردن</CButton>
+                  <CButton
+                    color="danger"
+                    name={item.id}
+                    onClick={deletProductHandler}
+                  >
+                    پاک کردن
+                  </CButton>
                 </CCardBody>
               </CCard>
             </CCol>
@@ -73,7 +90,6 @@ const Products = () => {
                       <CPlaceholder xs={6} />
                       <CPlaceholder xs={8} />
                     </CPlaceholder>
-          
                   </CCardBody>
                 </CCard>
               </CCol>

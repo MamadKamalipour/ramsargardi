@@ -28,7 +28,7 @@ function ProductsContextProvider({ children }) {
   }, []);
 
   return (
-    <ProductsContext.Provider value={{ products, categories, tags }}>
+    <ProductsContext.Provider value={{ products,setProducts, categories, tags }}>
       {children}
     </ProductsContext.Provider>
   );
