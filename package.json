@@ -62,7 +62,6 @@
   "config": {
     "coreui_library_short_version": "4.1"
   },
-  "proxy": "http://localhost:3000",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
