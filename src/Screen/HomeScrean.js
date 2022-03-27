@@ -322,7 +322,7 @@ const HomeScrean = () => {
         </section>
         <section
           className="vilaSlider container py-4"
-          style={{ direction: "ltr" }}
+          style={{ direction: "rtl" }}
         >
           <Heading
             tag="h5"
@@ -391,7 +391,7 @@ const HomeScrean = () => {
         </section>
         <section
           className="vilaSlider container py-4"
-          style={{ direction: "ltr" }}
+          style={{ direction: "rtl" }}
         >
           <Heading
             tag="h5"
@@ -460,7 +460,7 @@ const HomeScrean = () => {
         </section>
         <section
           className="vilaSlider container py-4"
-          style={{ direction: "ltr" }}
+          style={{ direction:"rtl" }}
         >
           <Heading
             tag="h5"
@@ -529,7 +529,7 @@ const HomeScrean = () => {
         </section>
         <section
           className="vilaSlider container py-4"
-          style={{ direction: "ltr" }}
+          style={{ direction: "rtl" }}
         >
           <Heading
             tag="h5"
@@ -591,7 +591,7 @@ const HomeScrean = () => {
         </section>
         <section
           className="blog-section container w-50 py-4"
-          style={{ direction: "ltr" }}
+          style={{ direction: "rtl" }}
         >
           <Slider
             additionalTransfrom={0}
