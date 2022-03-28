@@ -73,12 +73,12 @@ const HomeScrean = () => {
     {
       id: 1,
       gallery: [
-        "https://picsum.photos/id/237/400/250",
-        "https://picsum.photos/id/237/400/250",
-        "https://picsum.photos/id/237/400/250",
-        "https://picsum.photos/id/237/400/250",
-        "https://picsum.photos/id/237/400/250",
-        "https://picsum.photos/id/237/400/250",
+        "https://picsum.photos/id/231/400/250",
+        "https://picsum.photos/id/232/400/250",
+        "https://picsum.photos/id/233/400/250",
+        "https://picsum.photos/id/234/400/250",
+        "https://picsum.photos/id/235/400/250",
+        "https://picsum.photos/id/236/400/250",
       ],
       link: "https://google.com",
       title: "1ویلا استخردار",
@@ -94,12 +94,12 @@ const HomeScrean = () => {
     {
       id: 2,
       gallery: [
-        "https://picsum.photos/id/237/400/250",
-        "https://picsum.photos/id/237/400/250",
-        "https://picsum.photos/id/237/400/250",
-        "https://picsum.photos/id/237/400/250",
-        "https://picsum.photos/id/237/400/250",
-        "https://picsum.photos/id/237/400/250",
+        "https://picsum.photos/id/212/400/250",
+        "https://picsum.photos/id/224/400/250",
+        "https://picsum.photos/id/123/400/250",
+        "https://picsum.photos/id/812/400/250",
+        "https://picsum.photos/id/182/400/250",
+        "https://picsum.photos/id/912/400/250",
       ],
       link: "https://google.com",
       title: "2ویلا استخردار",
@@ -115,12 +115,12 @@ const HomeScrean = () => {
     {
       id: 3,
       gallery: [
-        "https://picsum.photos/id/237/400/250",
-        "https://picsum.photos/id/237/400/250",
-        "https://picsum.photos/id/237/400/250",
-        "https://picsum.photos/id/237/400/250",
-        "https://picsum.photos/id/237/400/250",
-        "https://picsum.photos/id/237/400/250",
+        "https://picsum.photos/id/731/400/250",
+        "https://picsum.photos/id/312/400/250",
+        "https://picsum.photos/id/987/400/250",
+        "https://picsum.photos/id/521/400/250",
+        "https://picsum.photos/id/796/400/250",
+        "https://picsum.photos/id/465/400/250",
       ],
       link: "https://google.com",
       title: "3ویلا استخردار",
@@ -136,12 +136,12 @@ const HomeScrean = () => {
     {
       id: 4,
       gallery: [
-        "https://picsum.photos/id/237/400/250",
-        "https://picsum.photos/id/237/400/250",
-        "https://picsum.photos/id/237/400/250",
-        "https://picsum.photos/id/237/400/250",
-        "https://picsum.photos/id/237/400/250",
-        "https://picsum.photos/id/237/400/250",
+        "https://picsum.photos/id/700/400/250",
+        "https://picsum.photos/id/754/400/250",
+        "https://picsum.photos/id/645/400/250",
+        "https://picsum.photos/id/798/400/250",
+        "https://picsum.photos/id/126/400/250",
+        "https://picsum.photos/id/645/400/250",
       ],
       link: "https://google.com",
       title: "4ویلا استخردار",
@@ -151,18 +151,18 @@ const HomeScrean = () => {
       rooms: 2,
       price: "730000",
       priceWithDiscount: "500000",
-      isVerified: true,
-      discountPresentage: 20,
+      isVerified: false,
+      discountPresentage: 0,
     },
     {
       id: 5,
       gallery: [
-        "https://picsum.photos/id/237/400/250",
-        "https://picsum.photos/id/237/400/250",
-        "https://picsum.photos/id/237/400/250",
-        "https://picsum.photos/id/237/400/250",
-        "https://picsum.photos/id/237/400/250",
-        "https://picsum.photos/id/237/400/250",
+        "https://picsum.photos/id/785/400/250",
+        "https://picsum.photos/id/645/400/250",
+        "https://picsum.photos/id/936/400/250",
+        "https://picsum.photos/id/875/400/250",
+        "https://picsum.photos/id/785/400/250",
+        "https://picsum.photos/id/465/400/250",
       ],
       link: "https://google.com",
       title: "5ویلا استخردار",
@@ -172,18 +172,18 @@ const HomeScrean = () => {
       rooms: 2,
       price: "730000",
       priceWithDiscount: "500000",
-      isVerified: true,
+      isVerified: false,
       discountPresentage: 20,
     },
     {
       id: 6,
       gallery: [
-        "https://picsum.photos/id/237/400/250",
-        "https://picsum.photos/id/237/400/250",
-        "https://picsum.photos/id/237/400/250",
-        "https://picsum.photos/id/237/400/250",
-        "https://picsum.photos/id/237/400/250",
-        "https://picsum.photos/id/237/400/250",
+        "https://picsum.photos/id/785/400/250",
+        "https://picsum.photos/id/124/400/250",
+        "https://picsum.photos/id/721/400/250",
+        "https://picsum.photos/id/852/400/250",
+        "https://picsum.photos/id/925/400/250",
+        "https://picsum.photos/id/465/400/250",
       ],
       link: "https://google.com",
       title: "6ویلا استخردار",
@@ -193,18 +193,18 @@ const HomeScrean = () => {
       rooms: 2,
       price: "730000",
       priceWithDiscount: "500000",
-      isVerified: true,
-      discountPresentage: 20,
+      isVerified: false,
+      discountPresentage: 0,
     },
     {
       id: 7,
       gallery: [
-        "https://picsum.photos/id/237/400/250",
-        "https://picsum.photos/id/237/400/250",
-        "https://picsum.photos/id/237/400/250",
-        "https://picsum.photos/id/237/400/250",
-        "https://picsum.photos/id/237/400/250",
-        "https://picsum.photos/id/237/400/250",
+        "https://picsum.photos/id/798/400/250",
+        "https://picsum.photos/id/456/400/250",
+        "https://picsum.photos/id/654/400/250",
+        "https://picsum.photos/id/321/400/250",
+        "https://picsum.photos/id/753/400/250",
+        "https://picsum.photos/id/159/400/250",
       ],
       link: "https://google.com",
       title: "7ویلا استخردار",
@@ -214,18 +214,18 @@ const HomeScrean = () => {
       rooms: 2,
       price: "730000",
       priceWithDiscount: "500000",
-      isVerified: true,
+      isVerified: false,
       discountPresentage: 20,
     },
     {
       id: 8,
       gallery: [
-        "https://picsum.photos/id/237/400/250",
-        "https://picsum.photos/id/237/400/250",
-        "https://picsum.photos/id/237/400/250",
-        "https://picsum.photos/id/237/400/250",
-        "https://picsum.photos/id/237/400/250",
-        "https://picsum.photos/id/237/400/250",
+        "https://picsum.photos/id/951/400/250",
+        "https://picsum.photos/id/555/400/250",
+        "https://picsum.photos/id/333/400/250",
+        "https://picsum.photos/id/222/400/250",
+        "https://picsum.photos/id/111/400/250",
+        "https://picsum.photos/id/777/400/250",
       ],
       link: "https://google.com",
       title: "8ویلا استخردار",
@@ -235,8 +235,8 @@ const HomeScrean = () => {
       rooms: 2,
       price: "730000",
       priceWithDiscount: "500000",
-      isVerified: true,
-      discountPresentage: 20,
+      isVerified: false,
+      discountPresentage: 0,
     },
   ];
   const blogData = [
@@ -322,17 +322,19 @@ const HomeScrean = () => {
         </section>
         <section
           className="vilaSlider container py-4"
-          style={{ direction: "rtl" }}
+          style={{ direction: "ltr" }}
         >
           <Heading
             tag="h5"
             className="slider-title text-right text-bold mb-4 ps-3"
+            style={{ direction: "rtl" }}
           >
             پرطرفدار ترین ویلا ها
           </Heading>
           <Slider
             additionalTransfrom={0}
             arrows={false}
+            infinite
             centerMode={false}
             className="slider-custom"
             containerClass="container-with-dots"
@@ -391,17 +393,19 @@ const HomeScrean = () => {
         </section>
         <section
           className="vilaSlider container py-4"
-          style={{ direction: "rtl" }}
+          style={{ direction: "ltr" }}
         >
           <Heading
             tag="h5"
             className="slider-title text-right text-bold mb-4 ps-3"
+            style={{ direction: "rtl" }}
           >
             سوییت و آپارتمان
           </Heading>
           <Slider
             additionalTransfrom={0}
             arrows={false}
+            infinite
             centerMode={false}
             className="slider-custom"
             containerClass="container-with-dots"
@@ -460,17 +464,19 @@ const HomeScrean = () => {
         </section>
         <section
           className="vilaSlider container py-4"
-          style={{ direction:"rtl" }}
+          style={{ direction: "ltr" }}
         >
           <Heading
             tag="h5"
             className="slider-title text-right text-bold mb-4 ps-3"
+            style={{ direction: "rtl" }}
           >
             جذاب‌ترین اقامتگاه‌های رامسر
           </Heading>
           <Slider
             additionalTransfrom={0}
             arrows={false}
+            infinite
             centerMode={false}
             className="slider-custom"
             containerClass="container-with-dots"
@@ -529,16 +535,18 @@ const HomeScrean = () => {
         </section>
         <section
           className="vilaSlider container py-4"
-          style={{ direction: "rtl" }}
+          style={{ direction: "ltr" }}
         >
           <Heading
             tag="h5"
             className="slider-title text-right text-bold mb-4 ps-3"
+            style={{ direction: "rtl" }}
           >
             کلبه های خاص
           </Heading>
           <Slider
             additionalTransfrom={0}
+            infinite
             arrows={false}
             centerMode={false}
             className="slider-custom"
@@ -591,7 +599,7 @@ const HomeScrean = () => {
         </section>
         <section
           className="blog-section container w-50 py-4"
-          style={{ direction: "rtl" }}
+          style={{ direction: "ltr" }}
         >
           <Slider
             additionalTransfrom={0}

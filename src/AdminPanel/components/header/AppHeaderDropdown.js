@@ -5,7 +5,7 @@ import {
   CDropdown,
   CDropdownDivider,
   CDropdownHeader,
-  CDropdownItem,
+  CDropdownItemPlain,
   CDropdownMenu,
   CDropdownToggle,
 } from "@coreui/react";
@@ -32,31 +32,31 @@ const AppHeaderDropdown = () => {
           Settings
         </CDropdownHeader>{" "}
         <Link to="comments">
-          <CDropdownItem>
+          <CDropdownItemPlain>
             <CIcon icon={cilCommentSquare} className="me-2" />
             کامنت ها
-            {/* <CBadge color="warning" className="ms-2">
+            <CBadge color="warning" className="ms-2">
               42
-            </CBadge> */}
-          </CDropdownItem>
+            </CBadge>
+          </CDropdownItemPlain>
         </Link>
         <Link to="dashboard">
-          <CDropdownItem>
+          <CDropdownItemPlain>
             <CIcon icon={cilUser} className="me-2" />
             پروفایل
-          </CDropdownItem>
+          </CDropdownItemPlain>
         </Link>
         <Link to="settings">
-          <CDropdownItem>
+          <CDropdownItemPlain>
             <CIcon icon={cilSettings} className="me-2" />
             تنظیمات
-          </CDropdownItem>
+          </CDropdownItemPlain>
         </Link>
         <CDropdownDivider />
-        <CDropdownItem href="/">
+        <CDropdownItemPlain>
           <CIcon icon={cilLockLocked} className="me-2" />
           خروج
-        </CDropdownItem>
+        </CDropdownItemPlain>
       </CDropdownMenu>
     </CDropdown>
   );

@@ -3,6 +3,7 @@ import starSvg from "../../assets/image/star.svg";
 import Carousel from "react-multi-carousel";
 import styled from "styled-components";
 import "./VilaCard.scss";
+import { Link } from "react-router-dom";
 const VilaCard = ({ data, gallery }) => {
   const CardWrapper = styled.div`
     direction: rtl;
@@ -14,9 +15,12 @@ const VilaCard = ({ data, gallery }) => {
     position: relative;
     margin-left: 0.2rem;
     margin-right: 0.2rem;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
   `;
   return (
-    <>
+    <Link to="/" className="cardLink"> 
       <CardWrapper key={data.id}>
         <div className="card__header">
           <div className="card__header__badges">
@@ -116,7 +120,7 @@ const VilaCard = ({ data, gallery }) => {
           </div>
         </div>
       </CardWrapper>
-    </>
+    </Link>
   );
 };
 
