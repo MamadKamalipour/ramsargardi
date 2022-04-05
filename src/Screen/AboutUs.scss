@@ -1,0 +1,25 @@
+#mainAboutUs {
+  @media (max-width: 767px) {
+    width: 100%;
+    padding: 1rem;
+  }
+  .descriptions-container {
+    padding: 2rem;
+    .about-us-heading {
+      font-weight: 550;
+      .about-us-subheading {
+        color: #f25487;
+        font-weight: 600;
+      }
+    }
+  }
+  .about-us-table {
+    padding: 1rem;
+  }
+  .about-us-icons {
+    color: #f7d9d9;
+  }
+  .about-us-table-title {
+    font-weight: 500;
+  }
+}

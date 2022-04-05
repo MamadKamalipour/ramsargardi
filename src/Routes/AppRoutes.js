@@ -3,6 +3,8 @@ import { Route, Routes, Navigate } from "react-router-dom";
 import HomeScrean from "../Screen/HomeScrean";
 import AdminPanel from "../Screen/AdminPanel";
 import routes from "../AdminPanel/routes";
+import FAQScreen from "../Screen/FAQScreen";
+import AboutUs from "../Screen/AboutUs";
 
 // Containers
 const DefaultLayout = React.lazy(() =>
@@ -32,6 +34,8 @@ const appRoutes = () => {
     <Suspense fallback={loading}>
       <Routes>
         <Route path="/" element={<HomeScrean />} />
+        <Route path="aboutus" element={<AboutUs/> } />
+        <Route path="faq" element={<FAQScreen/>} />
         <Route path="administrator" element={<AdminPanel />}>
           <Route path="login" name="Login Page" element={<Login />} />
           <Route path="register" name="Register Page" element={<Register />} />

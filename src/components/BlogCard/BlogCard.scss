@@ -20,10 +20,11 @@
       }
     }
   }
-  &__conent {
+  &__content {
     width: 100%;
     text-align: center;
     padding: 2rem;
+ 
     @media (min-width: 767px) {
       width: 30%;
     }

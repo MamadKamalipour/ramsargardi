@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
-const Heading = ({ tag: Tag, children, className}) => {
-  return <Tag className={className}>{children}</Tag>;
+const Heading = ({ tag: Tag, children, className , ...props}) => {
+  return <Tag className={className} {...props}>{children}</Tag>;
 };
 Heading.defaultProps = {
   tag: "h1",
