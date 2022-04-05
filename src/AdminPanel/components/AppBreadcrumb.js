@@ -30,7 +30,7 @@ const AppBreadcrumb = () => {
   }
 
   const breadcrumbs = getBreadcrumbs(currentLocation)
-
+console.log(breadcrumbs)
   return (
     <CBreadcrumb className="m-0 ms-2">
       <CBreadcrumbItem href="/">خانه</CBreadcrumbItem>

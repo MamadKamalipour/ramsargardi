@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import "./index.scss";
 import CustomDropDown1 from "../CustomDropDown1/CustomDropDown1";
 import CustomRadioButton2 from "../CustomRadioButton2/CustomRadioButton2";
-import DateRangePicker from "../DateRangePicker";
-import moment from "jalali-moment";
 import CustomButton from "../CustomButton/CustomButton";
 const vilatypes = [
   {
@@ -64,15 +62,15 @@ const VilaFinder = () => {
   };
   const [customDropDownValue, setCustomDropDownValue] = useState("");
   const [vilatype, setVilaType] = useState("");
-  const [dateValue, setDateValue] = useState({
-    start: moment().locale("fa").format("YYYY/MM/DD"),
-    end: moment().locale("fa").format("YYYY/MM/DD"),
-  });
+  // const [dateValue, setDateValue] = useState({
+  //   start: moment().locale("fa").format("YYYY/MM/DD"),
+  //   end: moment().locale("fa").format("YYYY/MM/DD"),
+  // });
   const [peopleNumValue, setPeopleNumValue] = useState("");
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
-    console.log({ customDropDownValue, vilatype, dateValue, peopleNumValue });
+    console.log({ customDropDownValue, vilatype, peopleNumValue });
   };
 
   const onDropDownValueChange = (val) => {
@@ -86,14 +84,14 @@ const VilaFinder = () => {
   };
 
   const onDateChangeHandler = (value) => {
-    setDateValue({
-      start: moment(convertMomentToRequireFormat(value.start))
-        .locale("fa")
-        .format("YYYY/MM/DD"),
-      end: moment(convertMomentToRequireFormat(value.end))
-        .locale("fa")
-        .format("YYYY/MM/DD"),
-    });
+    // setDateValue({
+    //   start: moment(convertMomentToRequireFormat(value.start))
+    //     .locale("fa")
+    //     .format("YYYY/MM/DD"),
+    //   end: moment(convertMomentToRequireFormat(value.end))
+    //     .locale("fa")
+    //     .format("YYYY/MM/DD"),
+    // });
   };
   return (
     <>
@@ -124,11 +122,7 @@ const VilaFinder = () => {
             onHoverBackground="red"
             onHoverColor="#fff"
           />
-          {/* date */}
-          <DateRangePicker
-            value={dateValue}
-            onValueChange={onDateChangeHandler}
-          />
+
           {/* People */}
           <CustomRadioButton2
             data={peopleNum}

@@ -5,7 +5,7 @@ import {
   CDropdown,
   CDropdownDivider,
   CDropdownHeader,
-  CDropdownItem,
+  CDropdownItemPlain,
   CDropdownMenu,
   CDropdownToggle,
 } from "@coreui/react";
@@ -19,6 +19,7 @@ import {
 import CIcon from "@coreui/icons-react";
 
 import avatar8 from "./../../../assets/image/avatars/8.jpg";
+import { Link } from "react-router-dom";
 
 const AppHeaderDropdown = () => {
   return (
@@ -28,39 +29,34 @@ const AppHeaderDropdown = () => {
       </CDropdownToggle>
       <CDropdownMenu className="pt-0" placement="bottom-end">
         <CDropdownHeader className="bg-light fw-semibold py-2">
-          Account
-        </CDropdownHeader>
-        <CDropdownItem href="#">
-          <CIcon icon={cilBell} className="me-2" />
-          اعلان ها
-          <CBadge color="info" className="ms-2">
-            2
-          </CBadge>
-        </CDropdownItem>
-
-        <CDropdownItem href="#">
-          <CIcon icon={cilCommentSquare} className="me-2" />
-          کامنت های جدید
-          <CBadge color="warning" className="ms-2">
-            42
-          </CBadge>
-        </CDropdownItem>
-        <CDropdownHeader className="bg-light fw-semibold py-2">
           Settings
-        </CDropdownHeader>
-        <CDropdownItem href="#">
-          <CIcon icon={cilUser} className="me-2" />
-          پروفایل
-        </CDropdownItem>
-        <CDropdownItem href="/administrator/settings">
-          <CIcon icon={cilSettings} className="me-2" />
-          تنظیمات
-        </CDropdownItem>
+        </CDropdownHeader>{" "}
+        <Link to="comments">
+          <CDropdownItemPlain>
+            <CIcon icon={cilCommentSquare} className="me-2" />
+            کامنت ها
+            <CBadge color="warning" className="ms-2">
+              42
+            </CBadge>
+          </CDropdownItemPlain>
+        </Link>
+        <Link to="dashboard">
+          <CDropdownItemPlain>
+            <CIcon icon={cilUser} className="me-2" />
+            پروفایل
+          </CDropdownItemPlain>
+        </Link>
+        <Link to="settings">
+          <CDropdownItemPlain>
+            <CIcon icon={cilSettings} className="me-2" />
+            تنظیمات
+          </CDropdownItemPlain>
+        </Link>
         <CDropdownDivider />
-        <CDropdownItem href="/">
+        <CDropdownItemPlain>
           <CIcon icon={cilLockLocked} className="me-2" />
           خروج
-        </CDropdownItem>
+        </CDropdownItemPlain>
       </CDropdownMenu>
     </CDropdown>
   );
