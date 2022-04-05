@@ -287,12 +287,13 @@ const HomeScrean = () => {
                   <CustomButton
                     type={"customBtn"}
                     // onClickHandler
+                    hoverColor="#fff"
                     text="مشاهده ویلا ها"
-                    btnWidth
                     csColor="#333"
                     csBgColor="#fff"
                     csBorderColor="#333"
                     csOnFocusBoxShadow="0 0 0 0.25rem rgb(114 114 114 / 76%)"
+                    
                   />
                 </div>
               </div>
