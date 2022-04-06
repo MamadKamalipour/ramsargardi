@@ -3,6 +3,7 @@ import "./index.scss";
 import CustomDropDown1 from "../CustomDropDown1/CustomDropDown1";
 import CustomRadioButton2 from "../CustomRadioButton2/CustomRadioButton2";
 import CustomButton from "../CustomButton/CustomButton";
+import CustomDatePicker from "../CustomDatePicker/CustomDatePicker";
 const vilatypes = [
   {
     id: "1",
@@ -56,16 +57,10 @@ const peopleNum = [
   },
 ];
 const VilaFinder = () => {
-  // states
-  const convertMomentToRequireFormat = (date) => {
-    return date._i.split("-//")[0].replace(/-/g, "/");
-  };
   const [customDropDownValue, setCustomDropDownValue] = useState("");
   const [vilatype, setVilaType] = useState("");
-  // const [dateValue, setDateValue] = useState({
-  //   start: moment().locale("fa").format("YYYY/MM/DD"),
-  //   end: moment().locale("fa").format("YYYY/MM/DD"),
-  // });
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(new Date());
   const [peopleNumValue, setPeopleNumValue] = useState("");
 
   const onSubmitHandler = (e) => {
@@ -83,16 +78,7 @@ const VilaFinder = () => {
     setPeopleNumValue(num);
   };
 
-  const onDateChangeHandler = (value) => {
-    // setDateValue({
-    //   start: moment(convertMomentToRequireFormat(value.start))
-    //     .locale("fa")
-    //     .format("YYYY/MM/DD"),
-    //   end: moment(convertMomentToRequireFormat(value.end))
-    //     .locale("fa")
-    //     .format("YYYY/MM/DD"),
-    // });
-  };
+  const onDateChangeHandler = (value) => {};
   return (
     <>
       <form onSubmit={onSubmitHandler} className="vilaFinder">
@@ -107,7 +93,23 @@ const VilaFinder = () => {
             value={customDropDownValue}
             onValueChange={onDropDownValueChange}
           />
-
+          {/* date */}
+          <div className="date-wrapper">
+            <div className="date-input">
+              <h5>تاریخ ورود</h5>
+              <CustomDatePicker
+                value={startDate}
+                onValueChange={(e) => setStartDate(e)}
+              />
+            </div>
+            <div className="date-input">
+              <h5>تاریخ خروج</h5>
+              <CustomDatePicker
+                value={endDate}
+                onValueChange={(e) => setEndDate(e)}
+              />
+            </div>
+          </div>
           {/* house type */}
           <CustomRadioButton2
             data={vilatypes}

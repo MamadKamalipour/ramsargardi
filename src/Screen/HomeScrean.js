@@ -588,7 +588,7 @@ const HomeScrean = () => {
         </Slider>
       </section>
       <section
-        className="blog-section container w-50 py-4"
+        className="blog-section container w-75 py-4"
        
       >
         <Heading tag="h4" style={{textAlign:"right", fontWeight:"bold"}}>مطالب وبلاگ</Heading>

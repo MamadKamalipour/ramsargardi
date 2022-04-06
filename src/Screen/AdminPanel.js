@@ -7,6 +7,7 @@ import UserContextProvider from "../AdminPanel/context/UserContextProvider";
 import BlogContextProvider from "../AdminPanel/context/BlogContextProvider";
 
 const AdminPanel = (props) => {
+  console.log("Salam MAMad")
   return (
     <Provider store={store}>
       <UserContextProvider>
