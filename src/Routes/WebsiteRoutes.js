@@ -8,7 +8,6 @@ import HomeScrean from "../Screen/HomeScrean";
 
 export default function WebsiteRoutes() {
   const location = useLocation();
-  console.log({ location: location.pathname });
   return (
     <Layout>
       <Routes>

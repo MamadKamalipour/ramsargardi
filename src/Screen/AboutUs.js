@@ -3,7 +3,6 @@ import Table from "../components/Table/Table";
 import Heading from "../components/Heading/Heading";
 import "./AboutUs.scss";
 const AboutUs = () => {
-  console.log("About us")
   const tableOption = [
     {
       id: 1,

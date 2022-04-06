@@ -96,17 +96,10 @@ const VilaFinder = () => {
           {/* date */}
           <div className="date-wrapper">
             <div className="date-input">
-              <h5>تاریخ ورود</h5>
+              <h5>تاریخ ورود و خروج</h5>
               <CustomDatePicker
                 value={startDate}
                 onValueChange={(e) => setStartDate(e)}
-              />
-            </div>
-            <div className="date-input">
-              <h5>تاریخ خروج</h5>
-              <CustomDatePicker
-                value={endDate}
-                onValueChange={(e) => setEndDate(e)}
               />
             </div>
           </div>

@@ -9,8 +9,6 @@ import weekends from "react-multi-date-picker/plugins/highlight_weekends";
 import "react-multi-date-picker/styles/layouts/mobile.css";
 import "./CustomDatePicker.scss";
 function CustomDatePicker({ value, onValueChange }) {
-  const normalDayPrice = 1500;
-  const fridayPrice = 2000;
   const weekDays = [
     "شنبه",
     "یکشنبه",
@@ -29,20 +27,33 @@ function CustomDatePicker({ value, onValueChange }) {
       return ret;
     });
   };
-  const bookedDays = ["1401/01/15", "1401/01/20", "1401/01/18", "1401/01/25"];
-  const newBookedDays = [];
-  bookedDays.map((day) => {
-    newBookedDays.push(day.toFaDigit());
-  });
-  const onChangeHandler = (e) => {
-    // console.log(e.format("YYYY/MM/DD"))
-    onValueChange(e.format("YYYY/MM/DD"));
+
+  const toEnDigit = function (str) {
+    const persianNumbers = [/۰/g, /۱/g, /۲/g, /۳/g, /۴/g, /۵/g, /۶/g, /۷/g, /۸/g, /۹/g]
+    if(typeof str === 'string')
+      {
+        for(var i=0; i<10; i++)
+        {
+          str = str.replace(persianNumbers[i], i);
+        }
+      }
+      return str;
   };
+
   const date = new DateObject({
     date: new Date(),
     calendar: persian,
     locale: persian_en,
   });
+  const bookedDays = ["1401/01/15", "1401/01/20", "1401/01/18", "1401/01/25"];
+  let newBookedDays;
+  newBookedDays = bookedDays.filter(day=> {
+    if(day > date.format("YYYY/MM/DD"))
+    return day.toFaDigit()
+  })
+  const onChangeHandler = (e) => {
+    onValueChange(e.format("YYYY/MM/DD"));
+  };
   return (
     <DatePicker
       minDate={new DateObject({ calendar: persian }).set(
@@ -53,14 +64,14 @@ function CustomDatePicker({ value, onValueChange }) {
       onChange={onChangeHandler}
       weekDays={weekDays}
       calendar={persian}
+      range
       locale={persian_fa}
       calendarPosition={"bottom"}
       plugins={[weekends()]}
       mapDays={({ date }) => {
-        let isWeekend = date.weekDay.index === 6;
-        let isBooked = newBookedDays.includes(date.format("YYYY/MM/DD"));
+        let isBooked = newBookedDays.includes(toEnDigit(date.format("YYYY/MM/DD")));
 
-        if (isBooked)
+        if (isBooked )
           return {
             disabled: true,
             style: { color: "#ccc" },
@@ -78,21 +89,6 @@ function CustomDatePicker({ value, onValueChange }) {
               </div>
             ),
           };
-
-        return {
-          children: (
-            <>
-              <div className="custom-day-wrapper">
-                <p className="custom-day">{date.format("D")}</p>
-                <small className="custom-day-price">
-                  {isWeekend
-                    ? fridayPrice.toLocaleString()
-                    : normalDayPrice.toLocaleString()}
-                </small>
-              </div>
-            </>
-          ),
-        };
       }}
       hideYear
       disableYearPicker

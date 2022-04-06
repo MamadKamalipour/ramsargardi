@@ -6,7 +6,6 @@ import "./Layout.scss";
 import { useLocation } from "react-router-dom";
 function Layout({ children }) {
   const location = useLocation();
-  console.log(location.pathname);
   return (
     <div className="main-layout">
       <Header
