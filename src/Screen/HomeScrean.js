@@ -297,7 +297,7 @@ const HomeScrean = () => {
           </div>
         </div>
       </Hero>
-      <section className="container mt-4">
+      <section className="container mt-4 mb-5">
         <div className="row d-flex flex-wrap flex-column flex-md-row justify-content-md-between">
           {cardData.map((card) => (
             <div className="col-12 col-md-6 col-lg-3" key={card.id}>
@@ -311,7 +311,7 @@ const HomeScrean = () => {
           ))}
         </div>
       </section>
-      <section className="container-fluid p-0">
+      <section className="container-fluid p-0 mb-5">
         <Banner
           className=""
           image={bannerImage}
@@ -319,7 +319,7 @@ const HomeScrean = () => {
         />
       </section>
       <section
-        className="vilaSlider container py-4"
+        className="vilaSlider container py-4 mb-5"
         style={{ direction: "rtl" }}
       >
         <Heading
@@ -380,7 +380,7 @@ const HomeScrean = () => {
           ))}
         </Slider>
       </section>
-      <section className="container-fluid p-0">
+      <section className="container-fluid p-0 mb-5">
         <Banner
           className=""
           image={bannerImage}
@@ -388,7 +388,7 @@ const HomeScrean = () => {
         />
       </section>
       <section
-        className="vilaSlider container py-4"
+        className="vilaSlider container py-4 mb-5"
         style={{ direction: "rtl" }}
       >
         <Heading
@@ -449,7 +449,7 @@ const HomeScrean = () => {
           ))}
         </Slider>
       </section>
-      <section className="container-fluid p-0">
+      <section className="container-fluid p-0 mb-5">
         <Banner
           className=""
           image={bannerImage}
@@ -457,7 +457,7 @@ const HomeScrean = () => {
         />
       </section>
       <section
-        className="vilaSlider container py-4"
+        className="vilaSlider container py-4 mb-5"
         style={{ direction: "rtl" }}
       >
         <Heading
@@ -518,7 +518,7 @@ const HomeScrean = () => {
           ))}
         </Slider>
       </section>
-      <section className="container-fluid p-0">
+      <section className="container-fluid p-0 mb-5">
         <Banner
           className=""
           image={bannerImage}
@@ -526,7 +526,7 @@ const HomeScrean = () => {
         />
       </section>
       <section
-        className="vilaSlider container py-4"
+        className="vilaSlider container py-4 mb-5"
         style={{ direction: "rtl" }}
       >
         <Heading
