@@ -18,7 +18,7 @@ import CustomSwiper from "../components/CustomSwiper/CustomSwiper";
 import { Navigation } from "swiper";
 import { SwiperSlide } from "swiper/react";
 import { Link } from "react-router-dom";
-import "./HomeScreen.scss"
+import "./HomeScreen.scss";
 const HomeScrean = () => {
   const { theme } = useContext(ThemeContext);
   const cardData = [
@@ -322,17 +322,20 @@ const HomeScrean = () => {
         />
       </section>
       <section
-        className="vilaSlider container py-4 mb-5"
+        className="vilaSlider container py-4 "
         style={{ direction: "rtl" }}
       >
-        <div className="d-flex w-100 justify-content-between p-2 align-items-center">
+        <div className="top-swipper-wrapper">
           <Heading
             tag="h5"
-            className="slider-title text-right text-bold mb-4 ps-3"
+            className="slider-title text-right text-bold m-0 ps-3"
           >
             پرطرفدار ترین ویلا ها
           </Heading>
-          <Link to="" className="link"> مشاهده همه</Link>
+          <Link to="" className="link">
+            {" "}
+            مشاهده همه
+          </Link>
         </div>
         <CustomSwiper
           spaceBetween={10}
@@ -379,14 +382,17 @@ const HomeScrean = () => {
         className="vilaSlider container py-4 mb-5"
         style={{ direction: "rtl" }}
       >
-        <div className="d-flex w-100 justify-content-between p-2 align-items-center">
+        <div className="top-swipper-wrapper">
           <Heading
             tag="h5"
-            className="slider-title text-right text-bold mb-4 ps-3"
+            className="slider-title text-right text-bold m-0 ps-3"
           >
             سوییت و آپارتمان
           </Heading>
-          <Link to="" className="link"> مشاهده همه</Link>
+          <Link to="" className="link">
+            {" "}
+            مشاهده همه
+          </Link>
         </div>
         <CustomSwiper
           spaceBetween={10}
@@ -433,14 +439,17 @@ const HomeScrean = () => {
         className="vilaSlider container py-4 mb-5"
         style={{ direction: "rtl" }}
       >
-        <div className="d-flex w-100 justify-content-between p-2 align-items-center">
+        <div className="top-swipper-wrapper">
           <Heading
             tag="h5"
-            className="slider-title text-right text-bold mb-4 ps-3"
+            className="slider-title text-right text-bold m-0 ps-3"
           >
             جذاب‌ترین اقامتگاه‌های رامسر
           </Heading>
-          <Link to="" className="link"> مشاهده همه</Link>
+          <Link to="" className="link">
+            {" "}
+            مشاهده همه
+          </Link>
         </div>
         <CustomSwiper
           spaceBetween={10}
@@ -487,14 +496,17 @@ const HomeScrean = () => {
         className="vilaSlider container py-4 mb-5"
         style={{ direction: "rtl" }}
       >
-        <div className="d-flex w-100 justify-content-between p-2 align-items-center">
+        <div className="top-swipper-wrapper">
           <Heading
             tag="h5"
-            className="slider-title text-right text-bold mb-4 ps-3"
+            className="slider-title text-right text-bold m-0 ps-3"
           >
             کلبه های خاص
           </Heading>
-          <Link to="" className="link"> مشاهده همه</Link>
+          <Link to="" className="link">
+            {" "}
+            مشاهده همه
+          </Link>
         </div>
         <CustomSwiper
           spaceBetween={10}

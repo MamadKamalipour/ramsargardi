@@ -4,8 +4,9 @@
   line-height: 2.7;
   text-decoration: none;
   vertical-align: middle;
-  padding: 0.4rem;
-  border: 1px solid  #f7d9d9;
+  border: 1px solid #f7d9d9;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   border-radius: 7px;
   transition: all 200ms ease-in-out;
 }
@@ -13,5 +14,10 @@
   color: #fff;
   background-color: #f25487;
   opacity: 1;
-  
+}
+.top-swipper-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
 }
