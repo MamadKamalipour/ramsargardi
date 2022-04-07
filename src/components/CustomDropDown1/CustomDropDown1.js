@@ -1,4 +1,3 @@
-import chroma from "chroma-js";
 import React from "react";
 
 import Select from "react-select";

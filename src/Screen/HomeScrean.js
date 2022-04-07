@@ -4,18 +4,21 @@ import VilaFinder from "../components/VilaFinder/";
 import Hero from "../components/Hero/Hero";
 import Heading from "../components/Heading/Heading";
 import TopNavBanner from "../components/TopNavBanner/TopNavBanner";
-import Header from "../components/Header/Header";
 import CustomButton from "../components/CustomButton/CustomButton";
 import FlippableCard from "../components/FlippableCard/FlippableCard";
 import Banner from "../components/Banner/Banner";
 import VilaCard from "../components/VilaCard/VilaCard";
-import Slider from "../components/Slider/Slider";
 import BlogCard from "../components/BlogCard/BlogCard";
 //other
 import topBanner from "../assets/image/topnavbanner.jpg";
 import bannerImage from "../assets/image/banner.jpg";
 import backgroundImage from "../assets/image/ramsar.jpg";
 import { ThemeContext } from "../context/ThemeContextProvider";
+import CustomSwiper from "../components/CustomSwiper/CustomSwiper";
+import { Navigation } from "swiper";
+import { SwiperSlide } from "swiper/react";
+import { Link } from "react-router-dom";
+import "./HomeScreen.scss"
 const HomeScrean = () => {
   const { theme } = useContext(ThemeContext);
   const cardData = [
@@ -322,63 +325,48 @@ const HomeScrean = () => {
         className="vilaSlider container py-4 mb-5"
         style={{ direction: "rtl" }}
       >
-        <Heading
-          tag="h5"
-          className="slider-title text-right text-bold mb-4 ps-3"
-        >
-          پرطرفدار ترین ویلا ها
-        </Heading>
-        <Slider
-          additionalTransfrom={0}
-          arrows={false}
-          centerMode={false}
-          className="slider-custom"
-          containerClass="container-with-dots"
-          dotListClass="dot-custom"
-          customTransition="all 1s linear"
-          draggable
-          focusOnSelect={false}
-          partialVisible
-          itemClass=""
-          keyBoardControl
-          minimumTouchDrag={80}
-          renderButtonGroupOutside={false}
-          renderDotsOutside={false}
-          responsive={{
-            desktop: {
-              breakpoint: {
-                max: 3000,
-                min: 1024,
-              },
-              items: 4,
-              partialVisibilityGutter: 40,
+        <div className="d-flex w-100 justify-content-between p-2 align-items-center">
+          <Heading
+            tag="h5"
+            className="slider-title text-right text-bold mb-4 ps-3"
+          >
+            پرطرفدار ترین ویلا ها
+          </Heading>
+          <Link to="" className="link"> مشاهده همه</Link>
+        </div>
+        <CustomSwiper
+          spaceBetween={10}
+          draggable={false}
+          loop={true}
+          cssMode={true}
+          navigation={true}
+          modules={[Navigation]}
+          breakpoints={{
+            "@0.75": {
+              slidesPerView: 1,
+              spaceBetween: 10,
+              navigation: false,
             },
-            mobile: {
-              breakpoint: {
-                max: 464,
-                min: 0,
-              },
-              items: 1,
-              partialVisibilityGutter: 30,
+            "@1.00": {
+              slidesPerView: 2,
+              spaceBetween: 10,
             },
-            tablet: {
-              breakpoint: {
-                max: 1024,
-                min: 464,
-              },
-              items: 2,
-              partialVisibilityGutter: 30,
+            "@1.50": {
+              slidesPerView: 3,
+              spaceBetween: 10,
+            },
+            "@2": {
+              slidesPerView: 4,
+              spaceBetween: 10,
             },
           }}
-          showDots={false}
-          sliderClass=""
-          slidesToSlide={1}
-          swipeable
         >
           {vilaData.map((vila) => (
-            <VilaCard data={vila} gallery={vila.gallery} key={vila.id} />
+            <SwiperSlide key={vila.id}>
+              <VilaCard data={vila} gallery={vila.gallery} />
+            </SwiperSlide>
           ))}
-        </Slider>
+        </CustomSwiper>
       </section>
       <section className="container-fluid p-0 mb-5">
         <Banner
@@ -391,63 +379,48 @@ const HomeScrean = () => {
         className="vilaSlider container py-4 mb-5"
         style={{ direction: "rtl" }}
       >
-        <Heading
-          tag="h5"
-          className="slider-title text-right text-bold mb-4 ps-3"
-        >
-          سوییت و آپارتمان
-        </Heading>
-        <Slider
-          additionalTransfrom={0}
-          arrows={false}
-          centerMode={false}
-          className="slider-custom"
-          containerClass="container-with-dots"
-          dotListClass="dot-custom"
-          customTransition="all 1s linear"
-          draggable
-          focusOnSelect={false}
-          partialVisible
-          itemClass=""
-          keyBoardControl
-          minimumTouchDrag={80}
-          renderButtonGroupOutside={false}
-          renderDotsOutside={false}
-          responsive={{
-            desktop: {
-              breakpoint: {
-                max: 3000,
-                min: 1024,
-              },
-              items: 4,
-              partialVisibilityGutter: 40,
+        <div className="d-flex w-100 justify-content-between p-2 align-items-center">
+          <Heading
+            tag="h5"
+            className="slider-title text-right text-bold mb-4 ps-3"
+          >
+            سوییت و آپارتمان
+          </Heading>
+          <Link to="" className="link"> مشاهده همه</Link>
+        </div>
+        <CustomSwiper
+          spaceBetween={10}
+          draggable={false}
+          loop={true}
+          cssMode={true}
+          navigation={true}
+          modules={[Navigation]}
+          breakpoints={{
+            "@0.75": {
+              slidesPerView: 1,
+              spaceBetween: 10,
+              navigation: false,
             },
-            mobile: {
-              breakpoint: {
-                max: 464,
-                min: 0,
-              },
-              items: 1,
-              partialVisibilityGutter: 30,
+            "@1.00": {
+              slidesPerView: 2,
+              spaceBetween: 10,
             },
-            tablet: {
-              breakpoint: {
-                max: 1024,
-                min: 464,
-              },
-              items: 2,
-              partialVisibilityGutter: 30,
+            "@1.50": {
+              slidesPerView: 3,
+              spaceBetween: 10,
+            },
+            "@2": {
+              slidesPerView: 4,
+              spaceBetween: 10,
             },
           }}
-          showDots={false}
-          sliderClass=""
-          slidesToSlide={1}
-          swipeable
         >
           {vilaData.map((vila) => (
-            <VilaCard data={vila} gallery={vila.gallery} key={vila.id} />
+            <SwiperSlide key={vila.id}>
+              <VilaCard data={vila} gallery={vila.gallery} />
+            </SwiperSlide>
           ))}
-        </Slider>
+        </CustomSwiper>
       </section>
       <section className="container-fluid p-0 mb-5">
         <Banner
@@ -460,63 +433,48 @@ const HomeScrean = () => {
         className="vilaSlider container py-4 mb-5"
         style={{ direction: "rtl" }}
       >
-        <Heading
-          tag="h5"
-          className="slider-title text-right text-bold mb-4 ps-3"
-        >
-          جذاب‌ترین اقامتگاه‌های رامسر
-        </Heading>
-        <Slider
-          additionalTransfrom={0}
-          arrows={false}
-          centerMode={false}
-          className="slider-custom"
-          containerClass="container-with-dots"
-          dotListClass="dot-custom"
-          customTransition="all 1s linear"
-          draggable
-          focusOnSelect={false}
-          partialVisible
-          itemClass=""
-          keyBoardControl
-          minimumTouchDrag={80}
-          renderButtonGroupOutside={false}
-          renderDotsOutside={false}
-          responsive={{
-            desktop: {
-              breakpoint: {
-                max: 3000,
-                min: 1024,
-              },
-              items: 4,
-              partialVisibilityGutter: 40,
+        <div className="d-flex w-100 justify-content-between p-2 align-items-center">
+          <Heading
+            tag="h5"
+            className="slider-title text-right text-bold mb-4 ps-3"
+          >
+            جذاب‌ترین اقامتگاه‌های رامسر
+          </Heading>
+          <Link to="" className="link"> مشاهده همه</Link>
+        </div>
+        <CustomSwiper
+          spaceBetween={10}
+          draggable={false}
+          loop={true}
+          cssMode={true}
+          navigation={true}
+          modules={[Navigation]}
+          breakpoints={{
+            "@0.75": {
+              slidesPerView: 1,
+              spaceBetween: 10,
+              navigation: false,
             },
-            mobile: {
-              breakpoint: {
-                max: 464,
-                min: 0,
-              },
-              items: 1,
-              partialVisibilityGutter: 30,
+            "@1.00": {
+              slidesPerView: 2,
+              spaceBetween: 10,
             },
-            tablet: {
-              breakpoint: {
-                max: 1024,
-                min: 464,
-              },
-              items: 2,
-              partialVisibilityGutter: 30,
+            "@1.50": {
+              slidesPerView: 3,
+              spaceBetween: 10,
+            },
+            "@2": {
+              slidesPerView: 4,
+              spaceBetween: 10,
             },
           }}
-          showDots={false}
-          sliderClass=""
-          slidesToSlide={1}
-          swipeable
         >
           {vilaData.map((vila) => (
-            <VilaCard data={vila} gallery={vila.gallery} key={vila.id} />
+            <SwiperSlide key={vila.id}>
+              <VilaCard data={vila} gallery={vila.gallery} />
+            </SwiperSlide>
           ))}
-        </Slider>
+        </CustomSwiper>
       </section>
       <section className="container-fluid p-0 mb-5">
         <Banner
@@ -529,121 +487,67 @@ const HomeScrean = () => {
         className="vilaSlider container py-4 mb-5"
         style={{ direction: "rtl" }}
       >
-        <Heading
-          tag="h5"
-          className="slider-title text-right text-bold mb-4 ps-3"
-        >
-          کلبه های خاص
-        </Heading>
-        <Slider
-          additionalTransfrom={0}
-          arrows={false}
-          centerMode={false}
-          className="slider-custom"
-          containerClass="container-with-dots"
-          dotListClass="dot-custom"
-          customTransition="all 1s linear"
-          draggable
-          focusOnSelect={false}
-          partialVisible
-          itemClass=""
-          keyBoardControl
-          minimumTouchDrag={80}
-          renderButtonGroupOutside={false}
-          renderDotsOutside={false}
-          responsive={{
-            desktop: {
-              breakpoint: {
-                max: 3000,
-                min: 1024,
-              },
-              items: 4,
-              partialVisibilityGutter: 40,
+        <div className="d-flex w-100 justify-content-between p-2 align-items-center">
+          <Heading
+            tag="h5"
+            className="slider-title text-right text-bold mb-4 ps-3"
+          >
+            کلبه های خاص
+          </Heading>
+          <Link to="" className="link"> مشاهده همه</Link>
+        </div>
+        <CustomSwiper
+          spaceBetween={10}
+          draggable={false}
+          loop={true}
+          cssMode={true}
+          navigation={true}
+          modules={[Navigation]}
+          breakpoints={{
+            "@0.75": {
+              slidesPerView: 1,
+              spaceBetween: 10,
+              navigation: false,
             },
-            mobile: {
-              breakpoint: {
-                max: 464,
-                min: 0,
-              },
-              items: 1,
-              partialVisibilityGutter: 30,
+            "@1.00": {
+              slidesPerView: 2,
+              spaceBetween: 10,
             },
-            tablet: {
-              breakpoint: {
-                max: 1024,
-                min: 464,
-              },
-              items: 2,
-              partialVisibilityGutter: 30,
+            "@1.50": {
+              slidesPerView: 3,
+              spaceBetween: 10,
+            },
+            "@2": {
+              slidesPerView: 4,
+              spaceBetween: 10,
             },
           }}
-          showDots={false}
-          sliderClass=""
-          slidesToSlide={1}
-          swipeable
         >
           {vilaData.map((vila) => (
-            <VilaCard data={vila} gallery={vila.gallery} key={vila.id} />
+            <SwiperSlide key={vila.id}>
+              <VilaCard data={vila} gallery={vila.gallery} />
+            </SwiperSlide>
           ))}
-        </Slider>
+        </CustomSwiper>
       </section>
-      <section
-        className="blog-section container w-75 py-4"
-       
-      >
-        <Heading tag="h4" style={{textAlign:"right", fontWeight:"bold"}}>مطالب وبلاگ</Heading>
-       <div  style={{ direction: "ltr" , marginTop:"1rem "}}>
-        <Slider
-          additionalTransfrom={0}
-          arrows={true}
-          autoPlaySpeed={10000}
-          centerMode={false}
-          className=""
-          containerClass="container-with-dots"
-          dotListClass=""
-          focusOnSelect={false}
-          infinite
-          itemClass=""
-          keyBoardControl
-          minimumTouchDrag={80}
-          renderButtonGroupOutside={false}
-          renderDotsOutside={false}
-          responsive={{
-            desktop: {
-              breakpoint: {
-                max: 3000,
-                min: 1024,
-              },
-              items: 1,
-              partialVisibilityGutter: 40,
-            },
-            mobile: {
-              breakpoint: {
-                max: 464,
-                min: 0,
-              },
-              items: 1,
-              partialVisibilityGutter: 30,
-            },
-            tablet: {
-              breakpoint: {
-                max: 1024,
-                min: 464,
-              },
-              items: 1,
-              partialVisibilityGutter: 30,
-            },
-          }}
-          showDots={false}
-          sliderClass=""
-          slidesToSlide={1}
-          swipeable
+      <section className="blog-section container w-75 py-4">
+        <Heading tag="h4" style={{ textAlign: "right", fontWeight: "bold" }}>
+          مطالب وبلاگ
+        </Heading>
+        <CustomSwiper
+          spaceBetween={0}
+          slidesPerView={1}
+          loop={true}
+          cssMode={true}
+          navigation={true}
+          modules={[Navigation]}
         >
           {blogData.map((blog) => (
-            <BlogCard data={blog} key={blog.id} />
+            <SwiperSlide key={blog.id}>
+              <BlogCard data={blog} />
+            </SwiperSlide>
           ))}
-        </Slider>
-        </div>
+        </CustomSwiper>
       </section>
     </div>
     // </div>
