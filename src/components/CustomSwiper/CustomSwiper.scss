@@ -6,10 +6,15 @@
   border-radius: 50%;
   background-color: rgba(51, 51, 51, 0.6);
 }
-.swiper-button-next:after,
+
 .swiper-button-prev:after {
   font-size: 1.4rem;
   padding-left: 3px;
+}
+.swiper-button-next:after{
+  font-size: 1.4rem;
+  padding-right: 3px;
+
 }
 .swiper-pagination-bullet {
   background-color: #fff !important;
