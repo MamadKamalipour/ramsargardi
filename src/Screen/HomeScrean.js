@@ -96,7 +96,7 @@ const HomeScrean = () => {
         "https://picsum.photos/id/212/400/250",
         "https://picsum.photos/id/224/400/250",
         "https://picsum.photos/id/123/400/250",
-        "https://picsum.photos/id/812/400/250",
+        "https://picsum.photos/id/82/400/250",
         "https://picsum.photos/id/182/400/250",
         "https://picsum.photos/id/912/400/250",
       ],

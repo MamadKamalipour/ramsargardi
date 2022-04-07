@@ -29,15 +29,24 @@ function CustomDatePicker({ value, onValueChange }) {
   };
 
   const toEnDigit = function (str) {
-    const persianNumbers = [/۰/g, /۱/g, /۲/g, /۳/g, /۴/g, /۵/g, /۶/g, /۷/g, /۸/g, /۹/g]
-    if(typeof str === 'string')
-      {
-        for(var i=0; i<10; i++)
-        {
-          str = str.replace(persianNumbers[i], i);
-        }
+    const persianNumbers = [
+      /۰/g,
+      /۱/g,
+      /۲/g,
+      /۳/g,
+      /۴/g,
+      /۵/g,
+      /۶/g,
+      /۷/g,
+      /۸/g,
+      /۹/g,
+    ];
+    if (typeof str === "string") {
+      for (var i = 0; i < 10; i++) {
+        str = str.replace(persianNumbers[i], i);
       }
-      return str;
+    }
+    return str;
   };
 
   const date = new DateObject({
@@ -47,19 +56,41 @@ function CustomDatePicker({ value, onValueChange }) {
   });
   const bookedDays = ["1401/01/15", "1401/01/20", "1401/01/18", "1401/01/25"];
   let newBookedDays;
-  newBookedDays = bookedDays.filter(day=> {
-    if(day > date.format("YYYY/MM/DD"))
-    return day.toFaDigit()
-  })
+  newBookedDays = bookedDays.filter((day) => {
+    if (day > date.format("YYYY/MM/DD")) return day.toFaDigit();
+  });
   const onChangeHandler = (e) => {
-    onValueChange(e.format("YYYY/MM/DD"));
+    let start = e[0];
+    let end = e[1];
+    if (start && end) {
+      onValueChange([toEnDigit(start.format("YYYY/MM/DD")),toEnDigit( end.format("YYYY/MM/DD"))]);
+    }
   };
+  function CustomRangeInput({ openCalendar, value }) {
+    let from = value[0] || "";
+    let to = value[1] || "";
+
+    value = `${from && to ? `از ${from} تا ${to} ` : from}`;
+
+    return (
+      <input
+        className="custom-input"
+        onFocus={openCalendar}
+        value={value}
+        readOnly
+      />
+    );
+  }
   return (
     <DatePicker
+      render={<CustomRangeInput />}
       minDate={new DateObject({ calendar: persian }).set(
         "day",
         `${date.format("D")}`
       )}
+      containerStyle={{
+        width: "100%",
+      }}
       value={value}
       onChange={onChangeHandler}
       weekDays={weekDays}
@@ -69,9 +100,11 @@ function CustomDatePicker({ value, onValueChange }) {
       calendarPosition={"bottom"}
       plugins={[weekends()]}
       mapDays={({ date }) => {
-        let isBooked = newBookedDays.includes(toEnDigit(date.format("YYYY/MM/DD")));
+        let isBooked = newBookedDays.includes(
+          toEnDigit(date.format("YYYY/MM/DD"))
+        );
 
-        if (isBooked )
+        if (isBooked)
           return {
             disabled: true,
             style: { color: "#ccc" },

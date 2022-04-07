@@ -4,6 +4,8 @@ import CustomDropDown1 from "../CustomDropDown1/CustomDropDown1";
 import CustomRadioButton2 from "../CustomRadioButton2/CustomRadioButton2";
 import CustomButton from "../CustomButton/CustomButton";
 import CustomDatePicker from "../CustomDatePicker/CustomDatePicker";
+import { DateObject } from "react-multi-date-picker";
+import persian from "react-date-object/calendars/persian";
 const vilatypes = [
   {
     id: "1",
@@ -59,13 +61,12 @@ const peopleNum = [
 const VilaFinder = () => {
   const [customDropDownValue, setCustomDropDownValue] = useState("");
   const [vilatype, setVilaType] = useState("");
-  const [startDate, setStartDate] = useState(new Date());
-  const [endDate, setEndDate] = useState(new Date());
+  const [date, setDate] = useState([new Date(), new DateObject({ calendar: persian }).add(1, "days")]);
   const [peopleNumValue, setPeopleNumValue] = useState("");
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
-    console.log({ customDropDownValue, vilatype, peopleNumValue });
+    console.log({ customDropDownValue, vilatype, peopleNumValue, date });
   };
 
   const onDropDownValueChange = (val) => {
@@ -78,7 +79,6 @@ const VilaFinder = () => {
     setPeopleNumValue(num);
   };
 
-  const onDateChangeHandler = (value) => {};
   return (
     <>
       <form onSubmit={onSubmitHandler} className="vilaFinder">
@@ -97,10 +97,7 @@ const VilaFinder = () => {
           <div className="date-wrapper">
             <div className="date-input">
               <h5>تاریخ ورود و خروج</h5>
-              <CustomDatePicker
-                value={startDate}
-                onValueChange={(e) => setStartDate(e)}
-              />
+              <CustomDatePicker value={date} onValueChange={setDate} />
             </div>
           </div>
           {/* house type */}
@@ -110,12 +107,10 @@ const VilaFinder = () => {
             label="نوع اقامتگاه"
             value={vilatype}
             onValueChange={onVilaTypeChange}
-            backgroundColor="red"
-            borderColor="blue"
+            backgroundColor="#f25487"
+            borderColor="#f7d9d9"
             boxShadow="0 0 0 0.25rem rgba(255, 0, 0, 0.281)"
             ActiveColor="#fff"
-            onHoverBackground="red"
-            onHoverColor="#fff"
           />
 
           {/* People */}
@@ -125,12 +120,10 @@ const VilaFinder = () => {
             label="تعداد نفرات"
             value={peopleNumValue}
             onValueChange={peopleNumValueChange}
-            backgroundColor="red"
-            borderColor="blue"
+            backgroundColor="#f25487"
+            borderColor="#f7d9d9"
             boxShadow="0 0 0 0.25rem rgba(255, 0, 0, 0.281)"
             ActiveColor="#fff"
-            onHoverBackground="red"
-            onHoverColor="#fff"
           />
           <CustomButton
             type="customBtn"
@@ -145,9 +138,8 @@ const VilaFinder = () => {
             text="جستجو"
             hoverColor="#fff"
             csColor="#fff"
-            csBgColor="rgb(112 112 112 / 85%)"
-            csBorderColor="#fff "
-            csOnFocusBoxShadow=""
+            csBgColor="#f25487"
+            csBorderColor="#f7d9d9"
           />
         </div>
       </form>
