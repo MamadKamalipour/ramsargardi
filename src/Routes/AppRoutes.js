@@ -29,13 +29,13 @@ const loading = (
   </div>
 );
 
-const appRoutes = () => {
+const AppRoutes = () => {
   return (
     <Suspense fallback={loading}>
       <Routes>
         <Route path="/" element={<HomeScrean />} />
-        <Route path="aboutus" element={<AboutUs/> } />
-        <Route path="faq" element={<FAQScreen/>} />
+        <Route path="aboutus" element={<AboutUs />} />
+        <Route path="faq" element={<FAQScreen />} />
         <Route path="administrator" element={<AdminPanel />}>
           <Route path="login" name="Login Page" element={<Login />} />
           <Route path="register" name="Register Page" element={<Register />} />
@@ -63,4 +63,4 @@ const appRoutes = () => {
   );
 };
 
-export default appRoutes;
+export default AppRoutes;

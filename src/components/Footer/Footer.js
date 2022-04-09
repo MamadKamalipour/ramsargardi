@@ -1,9 +1,9 @@
 import React from "react";
 import "./Footer.scss";
 
-const Footer = () => {
+const Footer = ({ isHide }) => {
   return (
-    <main id="mainFooter">
+    <main id="mainFooter" className={`${isHide ? "hideFooter" : ""}`}>
       <div className="main-footer">
         {/* row 1 */}
         <div className="waves">
@@ -35,13 +35,20 @@ const Footer = () => {
               <ul className="footer-ul-title">
                 <li className="footer-li-title">
                   {" "}
-                  <a href="/" className="footer-link">چگونه مهمان شوم</a>
+                  <a href="/" className="footer-link">
+                    چگونه مهمان شوم
+                  </a>
                 </li>
                 <li className="footer-li-title">
-                  <a href="/" className="footer-link">چگونه میزبان شوم</a>
+                  <a href="/" className="footer-link">
+                    چگونه میزبان شوم
+                  </a>
                 </li>
                 <li className="footer-li-title">
-                  <a href="/" className="footer-link"> سایر سوالات متداول</a>
+                  <a href="/" className="footer-link">
+                    {" "}
+                    سایر سوالات متداول
+                  </a>
                 </li>
               </ul>
             </div>
@@ -50,28 +57,43 @@ const Footer = () => {
               <h4 className="footer-coulmn-title">درباره ما</h4>
               <ul className="footer-ul-title">
                 <li className="footer-li-title">
-                  <a href="/" className="footer-link" >وبلاگ</a>
+                  <a href="/" className="footer-link">
+                    وبلاگ
+                  </a>
                 </li>
                 <li className="footer-li-title">
-                  <a href="/" className="footer-link">تماس با ما</a>
+                  <a href="/" className="footer-link">
+                    تماس با ما
+                  </a>
                 </li>
                 <li className="footer-li-title">
-                  <a href="/" className="footer-link">بیشتر</a>
+                  <a href="/" className="footer-link">
+                    بیشتر
+                  </a>
                 </li>
                 <li className="footer-li-title">
-                  <a href="/" className="footer-link"> پشتیبانی</a>
+                  <a href="/" className="footer-link">
+                    {" "}
+                    پشتیبانی
+                  </a>
                 </li>
-              </ul >
+              </ul>
             </div>
             {/* coulmn 3 */}
             <div className="col-12 col-md-6 col-lg-3 p-0 pt-3 text-right">
               <h4 className="footer-coulmn-title">قوانین و مقررات</h4>
               <ul className="footer-ul-title">
                 <li className="footer-li-title">
-                  <a href="/" className="footer-link"> قوانین و راهنمای میزبان</a>
+                  <a href="/" className="footer-link">
+                    {" "}
+                    قوانین و راهنمای میزبان
+                  </a>
                 </li>
                 <li className="footer-li-title">
-                  <a href="/" className="footer-link"> قوانین و مقررات رزرو</a>
+                  <a href="/" className="footer-link">
+                    {" "}
+                    قوانین و مقررات رزرو
+                  </a>
                 </li>
               </ul>
             </div>
@@ -79,23 +101,22 @@ const Footer = () => {
             <div className="col-12 col-md-6 col-lg-3 p-0 pt-3 text-right">
               <h4 className="footer-coulmn-title">شبکه های اجتماعی</h4>
               <ul className="footer-ul-title">
-                     <a href="/" className="footer-link">
-                {" "}
-                <i className="fab fa-facebook-f footer-icon"></i>
-              </a>
-              <a href="/" className="footer-link">
-                {" "}
-                <i className="fab fa-twitter footer-icon"></i>
-              </a>
-              <a href="/" className="footer-link">
-                {" "}
-                <i className="fab fa-instagram footer-icon"></i>
-              </a>
-              <a href="/" className="footer-link">
-                {" "}
-                <i className="fab fa-linkedin-in footer-icon"></i>
-              </a>
-
+                <a href="/" className="footer-link">
+                  {" "}
+                  <i className="fab fa-facebook-f footer-icon"></i>
+                </a>
+                <a href="/" className="footer-link">
+                  {" "}
+                  <i className="fab fa-twitter footer-icon"></i>
+                </a>
+                <a href="/" className="footer-link">
+                  {" "}
+                  <i className="fab fa-instagram footer-icon"></i>
+                </a>
+                <a href="/" className="footer-link">
+                  {" "}
+                  <i className="fab fa-linkedin-in footer-icon"></i>
+                </a>
               </ul>
             </div>
           </div>

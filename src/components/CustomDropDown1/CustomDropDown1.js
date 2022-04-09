@@ -9,7 +9,7 @@ const CustomDropDown1 = ({
   label,
   defaultValue,
   value,
-  onValueChange
+  onValueChange,
 }) => {
   let className;
   if (type === "single") {
@@ -22,6 +22,55 @@ const CustomDropDown1 = ({
 
   const onChangeHandler = (e) => {
     onValueChange(e);
+  };
+  const dot = (color = "transparent") => ({
+    alignItems: "center",
+    display: "flex",
+
+    ":before": {
+      backgroundColor: color,
+      borderRadius: 10,
+      content: '" "',
+      display: "block",
+      marginRight: 8,
+      height: 10,
+      width: 10,
+    },
+  });
+  const csStyles = {
+    control: (styles) => ({ ...styles, backgroundColor: "white" }),
+    option: (styles, { isDisabled, isFocused, isSelected }) => {
+      return {
+        ...styles,
+        backgroundColor: isDisabled
+          ? undefined
+          : isSelected
+          ? "#f25487"
+          : isFocused
+          ? "#f7d9d9"
+          : undefined,
+        color: isDisabled
+          ? "#333"
+          : isSelected
+          ? "#333"
+            ? "white"
+            : "black"
+          : "#333",
+        cursor: isDisabled ? "not-allowed" : "default",
+
+        ":active": {
+          ...styles[":active"],
+          backgroundColor: !isDisabled
+            ? isSelected
+              ? "#f25487"
+              : ""
+            : undefined,
+        },
+      };
+    },
+    input: (styles) => ({ ...styles, ...dot() }),
+    placeholder: (styles) => ({ ...styles, ...dot("#ccc") }),
+    singleValue: (styles, { data }) => ({ ...styles, ...dot(data.color) }),
   };
 
   return (
@@ -38,6 +87,14 @@ const CustomDropDown1 = ({
         classNamePrefix="select"
         value={value ? value : defaultValue}
         onChange={onChangeHandler}
+        styles={csStyles}
+        theme={(theme) => ({
+          ...theme,
+          colors: {
+            ...theme.colors,
+            primary: "#f25487",
+          },
+        })}
       />
     </div>
   );

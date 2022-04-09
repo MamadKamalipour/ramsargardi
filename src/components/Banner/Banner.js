@@ -1,11 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-const Banner = ({ link, image,className }) => {
+const Banner = ({ link, image, className }) => {
   const BannerEl = styled.div`
     width: 100%;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
-    max-width: 1400px;
     & a {
       text-decoration: none;
       & figure {
@@ -17,6 +16,8 @@ const Banner = ({ link, image,className }) => {
         padding-bottom: 23.571%;
         box-shadow: 0 0 10px 0 rgb(0 0 0 / 7%);
         & img {
+          border-radius: 20px;
+
           & ::before {
             top: 0;
             left: 0;
@@ -50,10 +51,10 @@ const Banner = ({ link, image,className }) => {
   `;
 
   return (
-    <BannerEl className={className}>
+    <BannerEl className={`container-fluid ${className}`}>
       <a href={link} target="_blank" rel="noreferrer">
         <figure>
-          <img src={image} alt="banner" />
+          <img src={image} alt="banner" className="container-fluid" />
         </figure>
       </a>
     </BannerEl>
