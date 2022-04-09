@@ -13,14 +13,17 @@ import BlogCard from "../components/BlogCard/BlogCard";
 import topBanner from "../assets/image/topnavbanner.jpg";
 import bannerImage from "../assets/image/banner.jpg";
 import backgroundImage from "../assets/image/ramsar.jpg";
-import { ThemeContext } from "../context/ThemeContextProvider";
 import CustomSwiper from "../components/CustomSwiper/CustomSwiper";
 import { Navigation } from "swiper";
 import { SwiperSlide } from "swiper/react";
 import { Link } from "react-router-dom";
 import "./HomeScreen.scss";
+// context
+import { ThemeContext } from "../context/ThemeContextProvider";
+import { VilaContext } from "../context/VilaContextProvider";
 const HomeScrean = () => {
   const { theme } = useContext(ThemeContext);
+  const { vilaData } = useContext(VilaContext);
   const cardData = [
     {
       id: 1,
@@ -71,176 +74,7 @@ const HomeScrean = () => {
         "https://cdn.jabama.com/image/jabama-images/1447261/db2e2a7d-a90d-4585-bcc2-5c0e6380fed5.png",
     },
   ];
-  const vilaData = [
-    {
-      id: 1,
-      gallery: [
-        "https://picsum.photos/id/231/400/250",
-        "https://picsum.photos/id/232/400/250",
-        "https://picsum.photos/id/233/400/250",
-        "https://picsum.photos/id/234/400/250",
-        "https://picsum.photos/id/235/400/250",
-        "https://picsum.photos/id/236/400/250",
-      ],
-      link: "https://google.com",
-      title: "1ویلا استخردار",
-      rating: "4.6",
-      voters: "26",
-      location: "گیلان، انزلی",
-      rooms: 2,
-      price: "730000",
-      priceWithDiscount: "500000",
-      isVerified: true,
-      discountPresentage: 20,
-    },
-    {
-      id: 2,
-      gallery: [
-        "https://picsum.photos/id/212/400/250",
-        "https://picsum.photos/id/224/400/250",
-        "https://picsum.photos/id/123/400/250",
-        "https://picsum.photos/id/82/400/250",
-        "https://picsum.photos/id/182/400/250",
-        "https://picsum.photos/id/912/400/250",
-      ],
-      link: "https://google.com",
-      title: "2ویلا استخردار",
-      rating: "4.6",
-      voters: "26",
-      location: "گیلان، انزلی",
-      rooms: 2,
-      price: "730000",
-      priceWithDiscount: "500000",
-      isVerified: true,
-      discountPresentage: 20,
-    },
-    {
-      id: 3,
-      gallery: [
-        "https://picsum.photos/id/731/400/250",
-        "https://picsum.photos/id/312/400/250",
-        "https://picsum.photos/id/987/400/250",
-        "https://picsum.photos/id/521/400/250",
-        "https://picsum.photos/id/796/400/250",
-        "https://picsum.photos/id/465/400/250",
-      ],
-      link: "https://google.com",
-      title: "3ویلا استخردار",
-      rating: "4.6",
-      voters: "26",
-      location: "گیلان، انزلی",
-      rooms: 2,
-      price: "730000",
-      priceWithDiscount: "500000",
-      isVerified: true,
-      discountPresentage: 20,
-    },
-    {
-      id: 4,
-      gallery: [
-        "https://picsum.photos/id/700/400/250",
-        "https://picsum.photos/id/754/400/250",
-        "https://picsum.photos/id/645/400/250",
-        "https://picsum.photos/id/798/400/250",
-        "https://picsum.photos/id/126/400/250",
-        "https://picsum.photos/id/645/400/250",
-      ],
-      link: "https://google.com",
-      title: "4ویلا استخردار",
-      rating: "4.6",
-      voters: "26",
-      location: "گیلان، انزلی",
-      rooms: 2,
-      price: "730000",
-      priceWithDiscount: "500000",
-      isVerified: false,
-      discountPresentage: 0,
-    },
-    {
-      id: 5,
-      gallery: [
-        "https://picsum.photos/id/785/400/250",
-        "https://picsum.photos/id/645/400/250",
-        "https://picsum.photos/id/936/400/250",
-        "https://picsum.photos/id/875/400/250",
-        "https://picsum.photos/id/785/400/250",
-        "https://picsum.photos/id/465/400/250",
-      ],
-      link: "https://google.com",
-      title: "5ویلا استخردار",
-      rating: "4.6",
-      voters: "26",
-      location: "گیلان، انزلی",
-      rooms: 2,
-      price: "730000",
-      priceWithDiscount: "500000",
-      isVerified: false,
-      discountPresentage: 20,
-    },
-    {
-      id: 6,
-      gallery: [
-        "https://picsum.photos/id/785/400/250",
-        "https://picsum.photos/id/124/400/250",
-        "https://picsum.photos/id/721/400/250",
-        "https://picsum.photos/id/852/400/250",
-        "https://picsum.photos/id/925/400/250",
-        "https://picsum.photos/id/465/400/250",
-      ],
-      link: "https://google.com",
-      title: "6ویلا استخردار",
-      rating: "4.6",
-      voters: "26",
-      location: "گیلان، انزلی",
-      rooms: 2,
-      price: "730000",
-      priceWithDiscount: "500000",
-      isVerified: false,
-      discountPresentage: 0,
-    },
-    {
-      id: 7,
-      gallery: [
-        "https://picsum.photos/id/798/400/250",
-        "https://picsum.photos/id/456/400/250",
-        "https://picsum.photos/id/654/400/250",
-        "https://picsum.photos/id/321/400/250",
-        "https://picsum.photos/id/753/400/250",
-        "https://picsum.photos/id/159/400/250",
-      ],
-      link: "https://google.com",
-      title: "7ویلا استخردار",
-      rating: "4.6",
-      voters: "26",
-      location: "گیلان، انزلی",
-      rooms: 2,
-      price: "730000",
-      priceWithDiscount: "500000",
-      isVerified: false,
-      discountPresentage: 20,
-    },
-    {
-      id: 8,
-      gallery: [
-        "https://picsum.photos/id/951/400/250",
-        "https://picsum.photos/id/555/400/250",
-        "https://picsum.photos/id/333/400/250",
-        "https://picsum.photos/id/222/400/250",
-        "https://picsum.photos/id/111/400/250",
-        "https://picsum.photos/id/777/400/250",
-      ],
-      link: "https://google.com",
-      title: "8ویلا استخردار",
-      rating: "4.6",
-      voters: "26",
-      location: "گیلان، انزلی",
-      rooms: 2,
-      price: "730000",
-      priceWithDiscount: "500000",
-      isVerified: false,
-      discountPresentage: 0,
-    },
-  ];
+
   const blogData = [
     {
       id: 1,
