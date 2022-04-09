@@ -1,7 +1,10 @@
 import React, { useContext } from "react";
-import VilaFeatuers from "../components/VilaFeatuers/VilaFeatuers";
-import { VilaContext } from "../context/VilaContextProvider";
 import { useLocation } from "react-router-dom";
+// context
+import { VilaContext } from "../context/VilaContextProvider";
+// components
+import VilaFeatuers from "../components/VilaFeatuers/VilaFeatuers";
+import SingleVilaLayout from "../layout/SingleVilaLayout";
 function SingleVila() {
   const location = useLocation();
   const { vilaData } = useContext(VilaContext);
@@ -9,9 +12,11 @@ function SingleVila() {
   const vilaInfo = vilaData.find((vila) => vila.id === parseInt(id));
 
   return (
-    <div>
-      <VilaFeatuers vilaOptions={vilaInfo.feature} />
-    </div>
+    <SingleVilaLayout>
+
+
+
+    </SingleVilaLayout>
   );
 }
 
