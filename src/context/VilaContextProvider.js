@@ -22,6 +22,88 @@ function VilaContextProvider({ children }) {
       priceWithDiscount: "500000",
       isVerified: true,
       discountPresentage: 20,
+      feature: [
+        {
+          isValid: false,
+          title: "حمام",
+          icon: "fa-solid fa-shower",
+        },
+        {
+          isValid: false,
+          title: "گاز",
+          icon: "fa-solid fa-fire-flame-simple",
+        },
+        {
+          isValid: true,
+          title: "آب",
+          icon: "fa-solid fa-faucet-drip",
+        },
+        {
+          isValid: true,
+          title: "مبلمان",
+          icon: "fa-solid fa-couch",
+        },
+        {
+          isValid: true,
+          title: "سرویس بهداشتی",
+          icon: "fa-solid fa-toilet-paper",
+        },
+        {
+          isValid: true,
+          title: "کولر",
+          icon: "fa-solid fa-air-conditioner",
+        },
+        {
+          isValid: false,
+          title: "پارکینگ",
+          icon: "fa-solid fa-square-parking",
+        },
+        {
+          isValid: true,
+          title: "برق",
+          icon: "fa-solid fa-plug",
+        },
+        {
+          isValid: true,
+          title: "حمام",
+          icon: "fa-solid fa-shower",
+        },
+        {
+          isValid: true,
+          title: "گاز",
+          icon: "fa-solid fa-fire-flame-simple",
+        },
+        {
+          isValid: true,
+          title: "آب",
+          icon: "fa-solid fa-faucet-drip",
+        },
+        {
+          isValid: true,
+          title: "مبلمان",
+          icon: "fa-solid fa-couch",
+        },
+        {
+          isValid: true,
+          title: "سرویس بهداشتی",
+          icon: "fa-solid fa-toilet-paper",
+        },
+        {
+          isValid: true,
+          title: "کولر",
+          icon: "fa-solid fa-air-conditioner",
+        },
+        {
+          isValid: false,
+          title: "پارکینگ",
+          icon: "fa-solid fa-square-parking",
+        },
+        {
+          isValid: true,
+          title: "برق",
+          icon: "fa-solid fa-plug",
+        },
+      ],
     },
     {
       id: 2,
@@ -43,6 +125,88 @@ function VilaContextProvider({ children }) {
       priceWithDiscount: "500000",
       isVerified: true,
       discountPresentage: 20,
+      feature: [
+        {
+          isValid: false,
+          title: "حمام",
+          icon: "fa-solid fa-shower",
+        },
+        {
+          isValid: false,
+          title: "گاز",
+          icon: "fa-solid fa-fire-flame-simple",
+        },
+        {
+          isValid: true,
+          title: "آب",
+          icon: "fa-solid fa-faucet-drip",
+        },
+        {
+          isValid: true,
+          title: "مبلمان",
+          icon: "fa-solid fa-couch",
+        },
+        {
+          isValid: true,
+          title: "سرویس بهداشتی",
+          icon: "fa-solid fa-toilet-paper",
+        },
+        {
+          isValid: true,
+          title: "کولر",
+          icon: "fa-solid fa-air-conditioner",
+        },
+        {
+          isValid: false,
+          title: "پارکینگ",
+          icon: "fa-solid fa-square-parking",
+        },
+        {
+          isValid: true,
+          title: "برق",
+          icon: "fa-solid fa-plug",
+        },
+        {
+          isValid: true,
+          title: "حمام",
+          icon: "fa-solid fa-shower",
+        },
+        {
+          isValid: true,
+          title: "گاز",
+          icon: "fa-solid fa-fire-flame-simple",
+        },
+        {
+          isValid: true,
+          title: "آب",
+          icon: "fa-solid fa-faucet-drip",
+        },
+        {
+          isValid: true,
+          title: "مبلمان",
+          icon: "fa-solid fa-couch",
+        },
+        {
+          isValid: true,
+          title: "سرویس بهداشتی",
+          icon: "fa-solid fa-toilet-paper",
+        },
+        {
+          isValid: true,
+          title: "کولر",
+          icon: "fa-solid fa-air-conditioner",
+        },
+        {
+          isValid: false,
+          title: "پارکینگ",
+          icon: "fa-solid fa-square-parking",
+        },
+        {
+          isValid: true,
+          title: "برق",
+          icon: "fa-solid fa-plug",
+        },
+      ],
     },
     {
       id: 3,
@@ -64,6 +228,88 @@ function VilaContextProvider({ children }) {
       priceWithDiscount: "500000",
       isVerified: true,
       discountPresentage: 20,
+      feature: [
+        {
+          isValid: false,
+          title: "حمام",
+          icon: "fa-solid fa-shower",
+        },
+        {
+          isValid: false,
+          title: "گاز",
+          icon: "fa-solid fa-fire-flame-simple",
+        },
+        {
+          isValid: true,
+          title: "آب",
+          icon: "fa-solid fa-faucet-drip",
+        },
+        {
+          isValid: true,
+          title: "مبلمان",
+          icon: "fa-solid fa-couch",
+        },
+        {
+          isValid: true,
+          title: "سرویس بهداشتی",
+          icon: "fa-solid fa-toilet-paper",
+        },
+        {
+          isValid: true,
+          title: "کولر",
+          icon: "fa-solid fa-air-conditioner",
+        },
+        {
+          isValid: false,
+          title: "پارکینگ",
+          icon: "fa-solid fa-square-parking",
+        },
+        {
+          isValid: true,
+          title: "برق",
+          icon: "fa-solid fa-plug",
+        },
+        {
+          isValid: true,
+          title: "حمام",
+          icon: "fa-solid fa-shower",
+        },
+        {
+          isValid: true,
+          title: "گاز",
+          icon: "fa-solid fa-fire-flame-simple",
+        },
+        {
+          isValid: true,
+          title: "آب",
+          icon: "fa-solid fa-faucet-drip",
+        },
+        {
+          isValid: true,
+          title: "مبلمان",
+          icon: "fa-solid fa-couch",
+        },
+        {
+          isValid: true,
+          title: "سرویس بهداشتی",
+          icon: "fa-solid fa-toilet-paper",
+        },
+        {
+          isValid: true,
+          title: "کولر",
+          icon: "fa-solid fa-air-conditioner",
+        },
+        {
+          isValid: false,
+          title: "پارکینگ",
+          icon: "fa-solid fa-square-parking",
+        },
+        {
+          isValid: true,
+          title: "برق",
+          icon: "fa-solid fa-plug",
+        },
+      ],
     },
     {
       id: 4,
@@ -85,6 +331,88 @@ function VilaContextProvider({ children }) {
       priceWithDiscount: "500000",
       isVerified: false,
       discountPresentage: 0,
+      feature: [
+        {
+          isValid: false,
+          title: "حمام",
+          icon: "fa-solid fa-shower",
+        },
+        {
+          isValid: false,
+          title: "گاز",
+          icon: "fa-solid fa-fire-flame-simple",
+        },
+        {
+          isValid: true,
+          title: "آب",
+          icon: "fa-solid fa-faucet-drip",
+        },
+        {
+          isValid: true,
+          title: "مبلمان",
+          icon: "fa-solid fa-couch",
+        },
+        {
+          isValid: true,
+          title: "سرویس بهداشتی",
+          icon: "fa-solid fa-toilet-paper",
+        },
+        {
+          isValid: true,
+          title: "کولر",
+          icon: "fa-solid fa-air-conditioner",
+        },
+        {
+          isValid: false,
+          title: "پارکینگ",
+          icon: "fa-solid fa-square-parking",
+        },
+        {
+          isValid: true,
+          title: "برق",
+          icon: "fa-solid fa-plug",
+        },
+        {
+          isValid: true,
+          title: "حمام",
+          icon: "fa-solid fa-shower",
+        },
+        {
+          isValid: true,
+          title: "گاز",
+          icon: "fa-solid fa-fire-flame-simple",
+        },
+        {
+          isValid: true,
+          title: "آب",
+          icon: "fa-solid fa-faucet-drip",
+        },
+        {
+          isValid: true,
+          title: "مبلمان",
+          icon: "fa-solid fa-couch",
+        },
+        {
+          isValid: true,
+          title: "سرویس بهداشتی",
+          icon: "fa-solid fa-toilet-paper",
+        },
+        {
+          isValid: true,
+          title: "کولر",
+          icon: "fa-solid fa-air-conditioner",
+        },
+        {
+          isValid: false,
+          title: "پارکینگ",
+          icon: "fa-solid fa-square-parking",
+        },
+        {
+          isValid: true,
+          title: "برق",
+          icon: "fa-solid fa-plug",
+        },
+      ],
     },
     {
       id: 5,
@@ -106,6 +434,88 @@ function VilaContextProvider({ children }) {
       priceWithDiscount: "500000",
       isVerified: false,
       discountPresentage: 20,
+      feature: [
+        {
+          isValid: false,
+          title: "حمام",
+          icon: "fa-solid fa-shower",
+        },
+        {
+          isValid: false,
+          title: "گاز",
+          icon: "fa-solid fa-fire-flame-simple",
+        },
+        {
+          isValid: true,
+          title: "آب",
+          icon: "fa-solid fa-faucet-drip",
+        },
+        {
+          isValid: true,
+          title: "مبلمان",
+          icon: "fa-solid fa-couch",
+        },
+        {
+          isValid: true,
+          title: "سرویس بهداشتی",
+          icon: "fa-solid fa-toilet-paper",
+        },
+        {
+          isValid: true,
+          title: "کولر",
+          icon: "fa-solid fa-air-conditioner",
+        },
+        {
+          isValid: false,
+          title: "پارکینگ",
+          icon: "fa-solid fa-square-parking",
+        },
+        {
+          isValid: true,
+          title: "برق",
+          icon: "fa-solid fa-plug",
+        },
+        {
+          isValid: true,
+          title: "حمام",
+          icon: "fa-solid fa-shower",
+        },
+        {
+          isValid: true,
+          title: "گاز",
+          icon: "fa-solid fa-fire-flame-simple",
+        },
+        {
+          isValid: true,
+          title: "آب",
+          icon: "fa-solid fa-faucet-drip",
+        },
+        {
+          isValid: true,
+          title: "مبلمان",
+          icon: "fa-solid fa-couch",
+        },
+        {
+          isValid: true,
+          title: "سرویس بهداشتی",
+          icon: "fa-solid fa-toilet-paper",
+        },
+        {
+          isValid: true,
+          title: "کولر",
+          icon: "fa-solid fa-air-conditioner",
+        },
+        {
+          isValid: false,
+          title: "پارکینگ",
+          icon: "fa-solid fa-square-parking",
+        },
+        {
+          isValid: true,
+          title: "برق",
+          icon: "fa-solid fa-plug",
+        },
+      ],
     },
     {
       id: 6,
@@ -127,6 +537,88 @@ function VilaContextProvider({ children }) {
       priceWithDiscount: "500000",
       isVerified: false,
       discountPresentage: 0,
+      feature: [
+        {
+          isValid: false,
+          title: "حمام",
+          icon: "fa-solid fa-shower",
+        },
+        {
+          isValid: false,
+          title: "گاز",
+          icon: "fa-solid fa-fire-flame-simple",
+        },
+        {
+          isValid: true,
+          title: "آب",
+          icon: "fa-solid fa-faucet-drip",
+        },
+        {
+          isValid: true,
+          title: "مبلمان",
+          icon: "fa-solid fa-couch",
+        },
+        {
+          isValid: true,
+          title: "سرویس بهداشتی",
+          icon: "fa-solid fa-toilet-paper",
+        },
+        {
+          isValid: true,
+          title: "کولر",
+          icon: "fa-solid fa-air-conditioner",
+        },
+        {
+          isValid: false,
+          title: "پارکینگ",
+          icon: "fa-solid fa-square-parking",
+        },
+        {
+          isValid: true,
+          title: "برق",
+          icon: "fa-solid fa-plug",
+        },
+        {
+          isValid: true,
+          title: "حمام",
+          icon: "fa-solid fa-shower",
+        },
+        {
+          isValid: true,
+          title: "گاز",
+          icon: "fa-solid fa-fire-flame-simple",
+        },
+        {
+          isValid: true,
+          title: "آب",
+          icon: "fa-solid fa-faucet-drip",
+        },
+        {
+          isValid: true,
+          title: "مبلمان",
+          icon: "fa-solid fa-couch",
+        },
+        {
+          isValid: true,
+          title: "سرویس بهداشتی",
+          icon: "fa-solid fa-toilet-paper",
+        },
+        {
+          isValid: true,
+          title: "کولر",
+          icon: "fa-solid fa-air-conditioner",
+        },
+        {
+          isValid: false,
+          title: "پارکینگ",
+          icon: "fa-solid fa-square-parking",
+        },
+        {
+          isValid: true,
+          title: "برق",
+          icon: "fa-solid fa-plug",
+        },
+      ],
     },
     {
       id: 7,
@@ -148,6 +640,88 @@ function VilaContextProvider({ children }) {
       priceWithDiscount: "500000",
       isVerified: false,
       discountPresentage: 20,
+      feature: [
+        {
+          isValid: false,
+          title: "حمام",
+          icon: "fa-solid fa-shower",
+        },
+        {
+          isValid: false,
+          title: "گاز",
+          icon: "fa-solid fa-fire-flame-simple",
+        },
+        {
+          isValid: true,
+          title: "آب",
+          icon: "fa-solid fa-faucet-drip",
+        },
+        {
+          isValid: true,
+          title: "مبلمان",
+          icon: "fa-solid fa-couch",
+        },
+        {
+          isValid: true,
+          title: "سرویس بهداشتی",
+          icon: "fa-solid fa-toilet-paper",
+        },
+        {
+          isValid: true,
+          title: "کولر",
+          icon: "fa-solid fa-air-conditioner",
+        },
+        {
+          isValid: false,
+          title: "پارکینگ",
+          icon: "fa-solid fa-square-parking",
+        },
+        {
+          isValid: true,
+          title: "برق",
+          icon: "fa-solid fa-plug",
+        },
+        {
+          isValid: true,
+          title: "حمام",
+          icon: "fa-solid fa-shower",
+        },
+        {
+          isValid: true,
+          title: "گاز",
+          icon: "fa-solid fa-fire-flame-simple",
+        },
+        {
+          isValid: true,
+          title: "آب",
+          icon: "fa-solid fa-faucet-drip",
+        },
+        {
+          isValid: true,
+          title: "مبلمان",
+          icon: "fa-solid fa-couch",
+        },
+        {
+          isValid: true,
+          title: "سرویس بهداشتی",
+          icon: "fa-solid fa-toilet-paper",
+        },
+        {
+          isValid: true,
+          title: "کولر",
+          icon: "fa-solid fa-air-conditioner",
+        },
+        {
+          isValid: false,
+          title: "پارکینگ",
+          icon: "fa-solid fa-square-parking",
+        },
+        {
+          isValid: true,
+          title: "برق",
+          icon: "fa-solid fa-plug",
+        },
+      ],
     },
     {
       id: 8,
@@ -169,12 +743,92 @@ function VilaContextProvider({ children }) {
       priceWithDiscount: "500000",
       isVerified: false,
       discountPresentage: 0,
+      feature: [
+        {
+          isValid: false,
+          title: "حمام",
+          icon: "fa-solid fa-shower",
+        },
+        {
+          isValid: false,
+          title: "گاز",
+          icon: "fa-solid fa-fire-flame-simple",
+        },
+        {
+          isValid: true,
+          title: "آب",
+          icon: "fa-solid fa-faucet-drip",
+        },
+        {
+          isValid: true,
+          title: "مبلمان",
+          icon: "fa-solid fa-couch",
+        },
+        {
+          isValid: true,
+          title: "سرویس بهداشتی",
+          icon: "fa-solid fa-toilet-paper",
+        },
+        {
+          isValid: true,
+          title: "کولر",
+          icon: "fa-solid fa-air-conditioner",
+        },
+        {
+          isValid: false,
+          title: "پارکینگ",
+          icon: "fa-solid fa-square-parking",
+        },
+        {
+          isValid: true,
+          title: "برق",
+          icon: "fa-solid fa-plug",
+        },
+        {
+          isValid: true,
+          title: "حمام",
+          icon: "fa-solid fa-shower",
+        },
+        {
+          isValid: true,
+          title: "گاز",
+          icon: "fa-solid fa-fire-flame-simple",
+        },
+        {
+          isValid: true,
+          title: "آب",
+          icon: "fa-solid fa-faucet-drip",
+        },
+        {
+          isValid: true,
+          title: "مبلمان",
+          icon: "fa-solid fa-couch",
+        },
+        {
+          isValid: true,
+          title: "سرویس بهداشتی",
+          icon: "fa-solid fa-toilet-paper",
+        },
+        {
+          isValid: true,
+          title: "کولر",
+          icon: "fa-solid fa-air-conditioner",
+        },
+        {
+          isValid: false,
+          title: "پارکینگ",
+          icon: "fa-solid fa-square-parking",
+        },
+        {
+          isValid: true,
+          title: "برق",
+          icon: "fa-solid fa-plug",
+        },
+      ],
     },
   ];
   return (
-    <VilaContext.Provider value={{vilaData}}>
-      {children}
-    </VilaContext.Provider>
+    <VilaContext.Provider value={{ vilaData }}>{children}</VilaContext.Provider>
   );
 }
 
