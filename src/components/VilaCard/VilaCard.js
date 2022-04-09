@@ -25,7 +25,7 @@ const VilaCard = ({ data, gallery }) => {
     margin-bottom: 5px;
   `;
   return (
-    <Link to="/" className="cardLink">
+    <Link to={`vila/${data.id}`} className="cardLink">
       <CardWrapper key={data.id}>
         <div className="card__header">
           <div className="card__header__badges">

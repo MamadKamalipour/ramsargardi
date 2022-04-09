@@ -5,6 +5,7 @@ import Layout from "../layout/Layout";
 import AboutUs from "../Screen/AboutUs";
 import FAQScreen from "../Screen/FAQScreen";
 import HomeScrean from "../Screen/HomeScrean";
+import SingleVila from "../Screen/SingleVila";
 
 export default function WebsiteRoutes() {
   const location = useLocation();
@@ -14,6 +15,7 @@ export default function WebsiteRoutes() {
         <Route path="aboutus" element={<AboutUs />} />
         <Route path="faq" element={<FAQScreen />} />
         <Route path="/" element={<HomeScrean />} />
+        <Route path="vila/:id" element={<SingleVila />} />
         <Route path="*" element={<Page404 />} />
       </Routes>
     </Layout>

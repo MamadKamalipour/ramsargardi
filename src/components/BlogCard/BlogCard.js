@@ -16,7 +16,7 @@ function BlogCard({ data }) {
         <CustomButton
           type="customBtn"
           csBorderColor="#333"
-          text="...مشاهده بیشتر"
+          text="مشاهده بیشتر..."
           isDisabled={false}
         />
       </div>
