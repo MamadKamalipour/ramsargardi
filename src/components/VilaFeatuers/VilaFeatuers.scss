@@ -1,0 +1,40 @@
+#mainVilaFeatuers {
+  .vila-feature-isvalid{
+    text-decoration: line-through;
+    color: gray;
+  }
+  padding: 2rem;
+  .vila-featuers-heading {
+    font-weight: bold;
+  }
+  .vila-featuers-option {
+    padding: 1rem;
+    display: flex;
+    .vila-featuers {
+      display: flex;
+      flex-wrap: wrap;
+      div {
+        padding: 2rem;
+        width: 25%;
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: 767px) {
+          width: 50%;
+        }
+        @media (max-width: 374px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .vila-featuers-button {
+    margin: 2rem;
+    font-size: 16px;
+    outline: unset;
+    border: 0;
+    border-radius: 5px;
+    color: darkslateblue;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+      rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  }
+}
