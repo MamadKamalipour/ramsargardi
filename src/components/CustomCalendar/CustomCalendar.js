@@ -28,14 +28,14 @@ function CustomCalendar({ value, onValueChange }) {
       return ret;
     });
   };
+
   const bookedDays = ["1401/01/20", "1401/01/18", "1401/01/25"];
   const newBookedDays = [];
   bookedDays.map((day) => {
     newBookedDays.push(day.toFaDigit());
   });
   const onChangeHandler = (e) => {
-    // console.log(e.format("YYYY/MM/DD"))
-    onValueChange(e.format("YYYY/MM/DD"));
+    onValueChange(e);
   };
   const date = new DateObject({
     date: new Date(),
@@ -53,8 +53,10 @@ function CustomCalendar({ value, onValueChange }) {
       onChange={onChangeHandler}
       weekDays={weekDays}
       calendar={persian}
+      range
       locale={persian_fa}
       plugins={[weekends()]}
+      
       mapDays={({ date, today }) => {
         let isWeekend = date.weekDay.index === 6;
         let isBooked = newBookedDays.includes(date.format("YYYY/MM/DD"));

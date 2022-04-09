@@ -8,6 +8,7 @@ import persian_en from "react-date-object/locales/persian_en";
 import weekends from "react-multi-date-picker/plugins/highlight_weekends";
 import "react-multi-date-picker/styles/layouts/mobile.css";
 import "./CustomDatePicker.scss";
+import { toEnDigit } from "../../utils/functions";
 function CustomDatePicker({ value, onValueChange }) {
   const weekDays = [
     "شنبه",
@@ -28,26 +29,7 @@ function CustomDatePicker({ value, onValueChange }) {
     });
   };
 
-  const toEnDigit = function (str) {
-    const persianNumbers = [
-      /۰/g,
-      /۱/g,
-      /۲/g,
-      /۳/g,
-      /۴/g,
-      /۵/g,
-      /۶/g,
-      /۷/g,
-      /۸/g,
-      /۹/g,
-    ];
-    if (typeof str === "string") {
-      for (var i = 0; i < 10; i++) {
-        str = str.replace(persianNumbers[i], i);
-      }
-    }
-    return str;
-  };
+
 
   const date = new DateObject({
     date: new Date(),
@@ -63,7 +45,7 @@ function CustomDatePicker({ value, onValueChange }) {
     let start = e[0];
     let end = e[1];
     if (start && end) {
-      onValueChange([toEnDigit(start.format("YYYY/MM/DD")),toEnDigit( end.format("YYYY/MM/DD"))]);
+      onValueChange([start, end]);
     }
   };
   function CustomRangeInput({ openCalendar, value }) {
