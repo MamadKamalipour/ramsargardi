@@ -97,7 +97,7 @@ const VilaFinder = () => {
           <div className="date-wrapper">
             <div className="date-input">
               <h5>تاریخ ورود و خروج</h5>
-              <CustomDatePicker value={date} onValueChange={setDate} />
+              <CustomDatePicker value={date} onValueChange={setDate} bookedDays={[]}/>
             </div>
           </div>
           {/* house type */}

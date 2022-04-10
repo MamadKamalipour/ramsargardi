@@ -22,6 +22,7 @@ function VilaContextProvider({ children }) {
       priceWithDiscount: "500000",
       isVerified: true,
       bookedDays: ["1401/01/31", "1401/01/21", "1401/01/25", "1401/01/26"],
+      owner:"person1",
 
       discountPresentage: 20,
       feature: [
@@ -127,6 +128,7 @@ function VilaContextProvider({ children }) {
       priceWithDiscount: "500000",
       isVerified: true,
       bookedDays: ["1401/01/15", "1401/01/21", "1401/01/18", "1401/01/25"],
+      owner:"person2",
 
       discountPresentage: 20,
       feature: [
@@ -232,6 +234,7 @@ function VilaContextProvider({ children }) {
       priceWithDiscount: "500000",
       isVerified: true,
       bookedDays: ["1401/01/30", "1401/01/22", "1401/01/25", "1401/01/27"],
+      owner:"person1",
       discountPresentage: 20,
       feature: [
         {
@@ -336,6 +339,7 @@ function VilaContextProvider({ children }) {
       priceWithDiscount: "500000",
       isVerified: false,
       bookedDays: ["1401/01/15", "1401/01/21", "1401/01/18", "1401/01/25"],
+      owner:"person2",
 
       discountPresentage: 0,
       feature: [
@@ -441,6 +445,7 @@ function VilaContextProvider({ children }) {
       priceWithDiscount: "500000",
       isVerified: false,
       bookedDays: ["1401/01/15", "1401/01/21", "1401/01/18", "1401/01/25"],
+      owner:"person1",
 
       discountPresentage: 20,
       feature: [
@@ -546,6 +551,7 @@ function VilaContextProvider({ children }) {
       priceWithDiscount: "500000",
       isVerified: false,
       bookedDays: ["1401/01/15", "1401/01/21", "1401/01/18", "1401/01/25"],
+      owner:"person2",
 
       discountPresentage: 0,
       feature: [
@@ -651,6 +657,7 @@ function VilaContextProvider({ children }) {
       priceWithDiscount: "500000",
       isVerified: false,
       bookedDays: ["1401/01/15", "1401/01/21", "1401/01/18", "1401/01/25"],
+      owner:"person1",
 
       discountPresentage: 20,
       feature: [
@@ -756,6 +763,7 @@ function VilaContextProvider({ children }) {
       priceWithDiscount: "500000",
       isVerified: false,
       bookedDays: ["1401/01/15", "1401/01/21", "1401/01/18", "1401/01/25"],
+      owner:"person2",
 
       discountPresentage: 0,
       feature: [

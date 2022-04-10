@@ -24,7 +24,7 @@ function VilaSingleMain({ calendarDate, setCalendarDate }) {
   return (
     <div>
       <h2>{vilaInfo.title}</h2>
-      <p>به میزبانی فلانی</p>
+      <p>به میزبانی {vilaInfo.owner}</p>
       <VilaFeatuers vilaOptions={vilaInfo.feature} />
       <div className="p-3">
         <div className="d-flex justify-content-between align-items-center mb-3">
