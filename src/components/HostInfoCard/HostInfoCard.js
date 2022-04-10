@@ -42,27 +42,21 @@ const HostInfoCard = ({ data }) => {
           </p>
         </div>
         <div className="first-container-card__footer">
-          <h6>لورم ایپسوم</h6>
-          <p className="graytext">
-          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و 
-          </p>
-        </div>
-      </div>
-      <div className="second-container-card">
         <div>
           <a
             href={`phoneto:${data.phoneNumber}`}
-            className="second-container-card__button"
+            className="first-container-card__footer__button"
             type="submit"
           >
             ارتباط با میزبان
           </a>
         </div>
-        <div className="second-container-card__tip">
+        <div className="first-container-card__footer__tip">
           <span>
             <i className="fa-solid fa-note"></i>
             {data.rateInfo}
           </span>
+        </div>
         </div>
       </div>
     </main>

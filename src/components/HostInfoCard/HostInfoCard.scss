@@ -34,40 +34,41 @@
     &__body {
     }
     &__footer {
-    }
-  }
-  .second-container-card {
-    width: 20%;
-    padding: 2rem;
-    &__heading {
-      direction: rtl;
-    }
-    &__button {
-      padding: .5rem;
-      font-weight: bold;
-      margin: 1rem 0 ;
-      text-decoration: none;
-      font-size: .8rem;
-      outline: unset;
-      border: 0;
-      border-radius: 5px;
-      color: #333;
-      border: 1px solid #333;
-      transition: all 200ms linear;
-      &:hover{
-        background-color: #333;
-        color: #fff;
-
+      &__heading {
+        direction: rtl;
       }
-    }
-    &__tip {
-      span {
-        i {
-          margin-left: 5px;
-          color: #f25487;
+      &__button {
+        width: 100%;
+        text-align: center;
+        padding: .5rem;
+        font-weight: bold;
+        margin: 1rem 0 ;
+        text-decoration: none;
+        font-size: .8rem;
+        outline: unset;
+        border: 0;
+        border-radius: 5px;
+        color: #333;
+        border: 1px solid #333;
+        transition: all 200ms linear;
+        &:hover{
+          background-color: #333;
+          color: #fff;
+  
+        }
+      }
+      &__tip {
+        span {
+          i {
+            margin-left: 5px;
+            color: #f25487;
+          }
         }
       }
     }
+  }
+  .second-container-card {
+
   }
   .graytext {
     color: gray;
