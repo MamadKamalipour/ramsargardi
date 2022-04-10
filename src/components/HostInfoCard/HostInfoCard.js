@@ -12,7 +12,7 @@ const HostInfoCard = ({ data }) => {
             alt="Hostpic"
           />
           <h3>{data.fullName}</h3>
-          <span className="graytext">{data.joinedDate} </span>
+          <span className="graytext">این کاربر از تاریخ {data.joinedDate} به ما ملحق شده </span>
         </div>
         <div className="first-container-card__underheading">
           <span>
