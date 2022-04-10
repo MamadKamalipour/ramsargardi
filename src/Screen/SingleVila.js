@@ -5,7 +5,6 @@ import { VilaContext } from "../context/VilaContextProvider";
 // components
 import SingleVilaLayout from "../layout/SingleVilaLayout";
 import DynamicImage from "../components/DynamicImage/DynamicImage";
-import VilaSingleMain from "../components/VilaSingleMain/VilaSingleMain";
 function SingleVila() {
   const location = useLocation();
   const { vilaData } = useContext(VilaContext);

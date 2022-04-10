@@ -2,44 +2,43 @@ import React from "react";
 import "./HostInfoCard.scss";
 
 const HostInfoCard = ({ data }) => {
-  const person = data[1];
   return (
     <main id="mainHostInfoCard">
       <div className="first-container-card">
         <div className="first-container-card__heading">
           <img
             className="first-container-card__heading__avatar"
-            src={person.profilePic}
-            alt="Host image"
+            src={data.profilePic}
+            alt="Hostpic"
           />
-          <h3>{person.fullName}</h3>
-          <span className="graytext">{person.joinedDate} </span>
+          <h3>{data.fullName}</h3>
+          <span className="graytext">{data.joinedDate} </span>
         </div>
         <div className="first-container-card__underheading">
           <span>
             <i className="fa-solid fa-star "></i>
-            {`${person.visited} بار دیده شده`}
+            {`${data.visited} بار دیده شده`}
           </span>
-          {person.verified ? (
+          {data.verified ? (
             <span>
               <i className="fa-solid fa-badge-check"></i> تایید شده
             </span>
           ) : null}
 
-          {person.rate > 8 ? (
+          {data.rate > 8 ? (
             <span>
               <i className="fa-solid fa-circle-heart"></i> میزبان برتر
             </span>
           ) : (
             <span>
               <i className="fa-solid fa-circle-heart"></i> امتیاز کاربر:{" "}
-              {person.rate}
+              {data.rate}
             </span>
           )}
         </div>
         <div className="first-container-card__body">
           <p>
-            {person.locationBtio}
+            {data.locationBtio}
           </p>
         </div>
         <div className="first-container-card__footer">
@@ -52,7 +51,7 @@ const HostInfoCard = ({ data }) => {
       <div className="second-container-card">
         <div>
           <a
-            href={`phoneto:${person.phoneNumber}`}
+            href={`phoneto:${data.phoneNumber}`}
             className="second-container-card__button"
             type="submit"
           >
@@ -62,7 +61,7 @@ const HostInfoCard = ({ data }) => {
         <div className="second-container-card__tip">
           <span>
             <i className="fa-solid fa-note"></i>
-            {person.rateInfo}
+            {data.rateInfo}
           </span>
         </div>
       </div>

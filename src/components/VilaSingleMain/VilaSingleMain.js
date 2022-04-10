@@ -2,15 +2,19 @@ import React, { useContext } from "react";
 
 import { useLocation } from "react-router-dom";
 import { VilaContext } from "../../context/VilaContextProvider";
+import { UserContext } from "../../context/UsersContextProvider";
 import { toEnDigit } from "../../utils/functions";
 import CustomCalendar from "../CustomCalendar/CustomCalendar";
 import VilaFeatuers from "../VilaFeatuers/VilaFeatuers";
+import HostInfoCard from "../HostInfoCard/HostInfoCard"
 import "./VilaSingleMain.scss";
 function VilaSingleMain({ calendarDate, setCalendarDate }) {
   const location = useLocation();
   const { vilaData } = useContext(VilaContext);
   const id = location.pathname.split("/")[2];
   const vilaInfo = vilaData.find((vila) => vila.id === parseInt(id));
+  const { users } = useContext(UserContext);
+  const owenerInfo = users.find((user) => user.userName === vilaInfo.owner);
   let nights = 0;
 
   if (calendarDate.length === 1) {
@@ -24,7 +28,8 @@ function VilaSingleMain({ calendarDate, setCalendarDate }) {
   return (
     <div>
       <h2>{vilaInfo.title}</h2>
-      <p>به میزبانی {vilaInfo.owner}</p>
+      <p>به میزبانی {owenerInfo.fullName}</p>
+      <HostInfoCard data={owenerInfo}/>
       <VilaFeatuers vilaOptions={vilaInfo.feature} />
       <div className="p-3">
         <div className="d-flex justify-content-between align-items-center mb-3">
