@@ -36,10 +36,10 @@ function CustomDatePicker({ value, onValueChange }) {
     calendar: persian,
     locale: persian_en,
   });
-  const bookedDays = ["1401/01/15", "1401/01/20", "1401/01/18", "1401/01/25"];
+  const bookedDays = ["1401/01/15", "1401/01/21", "1401/01/18", "1401/01/25"];
   let newBookedDays;
   newBookedDays = bookedDays.filter((day) => {
-    if (day > date.format("YYYY/MM/DD")) return day.toFaDigit();
+    if (day >= date.format("YYYY/MM/DD")) return day.toFaDigit();
   });
   const onChangeHandler = (e) => {
     let start = e[0];
@@ -65,6 +65,7 @@ function CustomDatePicker({ value, onValueChange }) {
   }
   return (
     <DatePicker
+    className="custom-datepicker"
       render={<CustomRangeInput />}
       minDate={new DateObject({ calendar: persian }).set(
         "day",

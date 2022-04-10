@@ -1,34 +1,45 @@
-.custom-calendar {
-  .rmdp-calendar {
-    padding: 0 !important;
-  }
-  .rmdp-top-class {
-    width: 100% !important;
-  }
+.custom-datepicker {
+  z-index: 100;
+
   .rmdp-today {
-    background-color: #7ea6f0;
+    background-color: unset;
+    border: 2px solid #7ea6f0;
   }
   .rmdp-day.rmdp-today span {
     background-color: unset;
   }
+  .rmdp-rtl {
+    width: 100% !important;
+  }
+  .rmdp-day.rmdp-today.rmdp-range{
+    background-color: #f25487;
+    border: 0;
+  }
+  @media (min-width: 500px) {
+    .rmdp-week-day {
+      font-size: 0.8rem;
+    }
+    .rmdp-calendar {
+      padding: 0 !important;
+    }
+    .rmdp-top-class {
+      width: 100% !important;
+    }
+
+    .rmdp-wrapper {
+      width: 100%;
+    }
+    .rmdp-day-picker div {
+      width: 100% !important;
+      min-width: 60px;
+    }
+  }
 }
-.rmdp-wrapper {
-  width: 100%;
-}
+
 // .rmdp-header div {
 //   width: 70%;
 //   margin: 0 auto;
 // }
-.rmdp-day-picker div {
-  width: 100% !important;
-  min-width: 60px;
-}
-.rmdp-day span {
-  border-radius: 0;
-}
-.rmdp-day {
-  min-height: 50px;
-}
 
 .custom-day-wrapper {
   display: flex;
@@ -64,22 +75,20 @@
   width: 79%;
   padding-right: 10px;
 }
-.rmdp-rtl {
-  width: 100% !important;
-  .rmdp-range.start {
-    border-bottom-left-radius: unset;
-    border-bottom-right-radius: unset !important;
-    border-top-left-radius: unset;
-    border-top-right-radius: unset !important;
-  }
-  .rmdp-range.end {
-    border-radius: 0px !important;
-  }
+
+.rmdp-range.start {
+  border-bottom-left-radius: unset;
+  border-bottom-right-radius: unset !important;
+  border-top-left-radius: unset;
+  border-top-right-radius: unset !important;
 }
+.rmdp-range.end {
+  border-radius: 0px !important;
+}
+
 .rmdp-day:not(.rmdp-disabled):not(.rmdp-day-hidden) span:hover {
   background-color: unset;
   color: #333;
-
 }
 .rmdp-day.rmdp-today span {
   background-color: unset;
@@ -88,10 +97,10 @@
 .rmdp-day:not(.rmdp-disabled):not(.rmdp-day-hidden) .highlight-red:hover {
   background-color: unset;
 }
-.rmdp-day:hover{
+.rmdp-day:hover {
   background-color: #f7d9d9;
 }
-.rmdp-range{
+.rmdp-range {
   background-color: #f25487;
   box-shadow: 0 0 3px #f25487;
 }

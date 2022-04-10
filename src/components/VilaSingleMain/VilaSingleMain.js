@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 import { DateObject } from "react-multi-date-picker";
+import persian from "react-date-object/calendars/persian";
+import persian_fa from "react-date-object/locales/persian_fa";
 import { useLocation } from "react-router-dom";
 import { VilaContext } from "../../context/VilaContextProvider";
 import { toEnDigit } from "../../utils/functions";
 import CustomCalendar from "../CustomCalendar/CustomCalendar";
 import VilaFeatuers from "../VilaFeatuers/VilaFeatuers";
-import persian_fa from "react-date-object/locales/persian_fa";
-import persian from "react-date-object/calendars/persian";
 import "./VilaSingleMain.scss";
 function VilaSingleMain({ calendarDate, setCalendarDate }) {
   const location = useLocation();
@@ -16,13 +16,14 @@ function VilaSingleMain({ calendarDate, setCalendarDate }) {
 
   let nights = 0;
   if (calendarDate.length === 1) {
-    nights = 1;
+    nights = parseInt(toEnDigit(calendarDate[0].format("DD")));
   }
   if (calendarDate.length > 1) {
     nights =
       parseInt(toEnDigit(calendarDate[1].format("DD"))) -
       parseInt(toEnDigit(calendarDate[0].format("DD")));
   }
+  console.log({ 1: nights, 2: calendarDate });
   return (
     <div>
       <h2>{vilaInfo.title}</h2>
@@ -32,9 +33,7 @@ function VilaSingleMain({ calendarDate, setCalendarDate }) {
         <div className="d-flex justify-content-between align-items-center mb-3">
           <div className="d-flex justify-content-between flex-column">
             <p className="m-0 nights pb-3">{`${nights} شب اقامت `}</p>
-            {nights === 0 ? (
-              ""
-            ) : nights === 1 ? (
+            {nights === 1 ? (
               <span>{calendarDate[0].format("DD MMMM")}</span>
             ) : (
               <span>{`${calendarDate[0].format(
@@ -47,10 +46,7 @@ function VilaSingleMain({ calendarDate, setCalendarDate }) {
             onClick={() =>
               setCalendarDate([
                 new DateObject({ locale: persian_fa, calendar: persian }),
-                new DateObject({ locale: persian_fa, calendar: persian }).add(
-                  1,
-                  "day"
-                ),
+                new DateObject({ locale: persian_fa, calendar: persian }),
               ])
             }
           >
