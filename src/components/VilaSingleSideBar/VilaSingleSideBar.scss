@@ -28,8 +28,9 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 50px;
+
     .price {
-      font-size: 1.3rem;
+      font-size: 1rem;
       font-weight: bold;
     }
     .rating {
@@ -45,6 +46,11 @@
       p {
         font-weight: bold;
         margin: 0;
+      }
+    }
+    @media (min-width: 425px) {
+      .price {
+        font-size: 1.3rem;
       }
     }
   }
