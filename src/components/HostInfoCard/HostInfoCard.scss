@@ -1,0 +1,76 @@
+#mainHostInfoCard {
+  direction: rtl;
+  display: flex;
+  padding: 2rem;
+  direction: rtl;
+  justify-content: center;
+  align-items: flex-start;
+  @media (max-width: 767px) {
+    display: inline-block;
+  }
+  .first-container-card {
+    width: 80%;
+    padding: 1rem;
+    &__heading {
+      &__avatar {
+        width: 10%;
+        height: 50%;
+        border-radius: 50%;
+        @media (max-width: 767px) {
+          width: 30%;
+        }
+      }
+    }
+    &__underheading {
+      display: flex;
+      gap: 10px;
+      span {
+        i {
+          color: #f25487;
+          font-size: 12px;
+        }
+      }
+    }
+    &__body {
+    }
+    &__footer {
+      &__heading {
+        direction: rtl;
+      }
+      &__button {
+        width: 100%;
+        text-align: center;
+        padding: .5rem;
+        font-weight: bold;
+        margin: 1rem 0 ;
+        text-decoration: none;
+        font-size: .8rem;
+        outline: unset;
+        border: 0;
+        border-radius: 5px;
+        color: #333;
+        border: 1px solid #333;
+        transition: all 200ms linear;
+        &:hover{
+          background-color: #333;
+          color: #fff;
+  
+        }
+      }
+      &__tip {
+        span {
+          i {
+            margin-left: 5px;
+            color: #f25487;
+          }
+        }
+      }
+    }
+  }
+  .second-container-card {
+
+  }
+  .graytext {
+    color: gray;
+  }
+}

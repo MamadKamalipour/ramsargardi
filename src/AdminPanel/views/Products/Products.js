@@ -1,6 +1,7 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { ProductsContext } from "../../context/ProductsContextProvider";
 import { titleShorten, descriptionShorten } from "../../../helpers/shorten";
+import ModalNotification from "../ModalNotification/ModalNotification";
 import {
   CCard,
   CCardBody,
@@ -14,15 +15,17 @@ import {
 } from "@coreui/react";
 import { Link } from "react-router-dom";
 const Products = () => {
+  const [modalVisiblity, setModalVisibility] = useState(false);
   const { products, setProducts } = useContext(ProductsContext);
   const placeHolederData = [1, 2, 3, 4, 5, 6, 7, 8];
   const deletProductHandler = (e) => {
+    console.log(e);
     fetch(`https://fakestoreapi.com/products/${e.target.name}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
       .then((json) => {
-        console.log(json)
+        console.log(json);
         const selectedId = json.id;
         setProducts(products.filter((item) => item.id !== selectedId));
       });
@@ -43,11 +46,17 @@ const Products = () => {
                   <CCardTitle>{titleShorten(item.title)}</CCardTitle>
                   <CCardText>{descriptionShorten(item.description)}</CCardText>
                   <CButton color="warning" className="me-2">
-                    <Link style={{textDecoration:"none", color:"inherit" }} to={`${item.id}`}>ویرایش</Link>
+                    <Link
+                      style={{ textDecoration: "none", color: "inherit" }}
+                      to={`${item.id}`}
+                    >
+                      ویرایش
+                    </Link>
                   </CButton>
                   <CButton
                     color="danger"
                     name={item.id}
+                    // onClick={() => setModalVisibility(!modalVisiblity)}
                     onClick={deletProductHandler}
                   >
                     پاک کردن
@@ -97,6 +106,15 @@ const Products = () => {
           </>
         )}
       </CRow>
+      <ModalNotification
+        isVisible={modalVisiblity}
+        setIsVisible={setModalVisibility}
+        title="آیا مطمئن هستید؟"
+        desc="با کلیک کردن بر روی کلید ثبت تمامی اطلاعات مربوط به محصول به طور کامل حدف میشود و تغییرات قابل برگشت نیست"
+        closeBtnText="لغو"
+        submitBtnText="ثبت تغیرات"
+        // onSubmitFunc={}
+      />
     </>
   );
 };

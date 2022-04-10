@@ -8,7 +8,7 @@ function BlogCard({ data }) {
       <div className="blogcard__image">
         <img src={data.image} alt={data.image} />
       </div>
-      <div className="blogcard__conent">
+      <div className="blogcard__content">
         <Heading tag="h4" className="blogcard__conent__title">
           {data.title}
         </Heading>
@@ -16,7 +16,7 @@ function BlogCard({ data }) {
         <CustomButton
           type="customBtn"
           csBorderColor="#333"
-          text="...مشاهده بیشتر"
+          text="مشاهده بیشتر..."
           isDisabled={false}
         />
       </div>

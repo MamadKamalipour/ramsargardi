@@ -1,8 +1,13 @@
 import React from "react";
 import starSvg from "../../assets/image/star.svg";
-import Carousel from "react-multi-carousel";
+// import Carousel from "react-multi-carousel";
 import styled from "styled-components";
 import "./VilaCard.scss";
+import { Link } from "react-router-dom";
+import CustomSwiper from "../CustomSwiper/CustomSwiper";
+import { Pagination } from "swiper";
+import { SwiperSlide } from "swiper/react";
+import "swiper/css/pagination";
 const VilaCard = ({ data, gallery }) => {
   const CardWrapper = styled.div`
     direction: rtl;
@@ -14,9 +19,13 @@ const VilaCard = ({ data, gallery }) => {
     position: relative;
     margin-left: 0.2rem;
     margin-right: 0.2rem;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    margin-bottom: 5px;
   `;
   return (
-    <>
+    <Link to={`vila/${data.id}`} className="cardLink">
       <CardWrapper key={data.id}>
         <div className="card__header">
           <div className="card__header__badges">
@@ -33,55 +42,22 @@ const VilaCard = ({ data, gallery }) => {
               <div></div>
             )}
           </div>
-          <Carousel
-            additionalTransfrom={0}
-            arrows={false}
-            autoPlay={false}
-            autoPlaySpeed={10000}
-            centerMode={false}
-            className=""
-            containerClass="container"
-            dotListClass=""
-            draggable
-            focusOnSelect={false}
-            infinite
-            itemClass=""
-            keyBoardControl
-            minimumTouchDrag={80}
-            renderButtonGroupOutside={false}
-            renderDotsOutside={false}
-            responsive={{
-              desktop: {
-                breakpoint: {
-                  max: 3000,
-                  min: 1024,
-                },
-                items: 1,
-              },
-              mobile: {
-                breakpoint: {
-                  max: 464,
-                  min: 0,
-                },
-                items: 1,
-              },
-              tablet: {
-                breakpoint: {
-                  max: 1024,
-                  min: 464,
-                },
-                items: 1,
-              },
+          <CustomSwiper
+            slidesPerView={1}
+            spaceBetween={30}
+            grabCursor={true}
+            pagination={{
+              clickable: true,
             }}
-            showDots
-            sliderClass=""
-            slidesToSlide={1}
-            swipeable
+            modules={[Pagination]}
+            className="mySwiper"
           >
             {gallery.map((item, index) => (
-              <img src={item} alt="house-gallery" key={index} />
+              <SwiperSlide key={index}>
+                <img src={item} alt="house-gallery" />
+              </SwiperSlide>
             ))}
-          </Carousel>
+          </CustomSwiper>
         </div>
         <div className="card__body">
           <div className="card__body__title">
@@ -116,7 +92,7 @@ const VilaCard = ({ data, gallery }) => {
           </div>
         </div>
       </CardWrapper>
-    </>
+    </Link>
   );
 };
 

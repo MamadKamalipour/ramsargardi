@@ -3,8 +3,10 @@
   flex-direction: column;
   gap: 10px;
   margin-right: 1rem;
+  width: 100%;
   &__inputs {
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    width: 74%;
   }
   &__label {
     font-weight: bold;
