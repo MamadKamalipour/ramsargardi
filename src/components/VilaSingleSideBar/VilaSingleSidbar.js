@@ -36,6 +36,9 @@ function VilaSingleSidbar({ calendarDate, setCalendarDate }) {
     setPeopleNumValue(num);
   };
 
+
+
+
   return (
     <div className="sidebar__card">
       {vilaInfo.discountPresentage !== 0 ? (
@@ -61,6 +64,7 @@ function VilaSingleSidbar({ calendarDate, setCalendarDate }) {
         <CustomDatePicker
           value={calendarDate}
           onValueChange={setCalendarDate}
+          bookedDays={vilaInfo.bookedDays}
         />
         <CustomRadioButton2
           data={peopleNum}

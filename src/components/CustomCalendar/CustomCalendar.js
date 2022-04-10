@@ -8,7 +8,7 @@ import persian_en from "react-date-object/locales/persian_en";
 import weekends from "react-multi-date-picker/plugins/highlight_weekends";
 import "./CustomCalendar.scss";
 import { toEnDigit } from "../../utils/functions";
-function CustomCalendar({ value, onValueChange }) {
+function CustomCalendar({ value, onValueChange, bookedDays }) {
   const normalDayPrice = 1500;
   const fridayPrice = 2000;
   const weekDays = [
@@ -35,7 +35,6 @@ function CustomCalendar({ value, onValueChange }) {
     calendar: persian,
     locale: persian_en,
   });
-  const bookedDays = ["1401/01/15", "1401/01/21", "1401/01/18", "1401/01/25"];
   let newBookedDays;
   newBookedDays = bookedDays.filter((day) => {
     if (day >= date.format("YYYY/MM/DD")) return day.toFaDigit();

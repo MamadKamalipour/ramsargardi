@@ -13,7 +13,7 @@ function VilaSingleMain({ calendarDate, setCalendarDate }) {
   const { vilaData } = useContext(VilaContext);
   const id = location.pathname.split("/")[2];
   const vilaInfo = vilaData.find((vila) => vila.id === parseInt(id));
-
+  console.log(vilaInfo);
   let nights = 0;
   if (calendarDate.length === 1) {
     nights = parseInt(toEnDigit(calendarDate[0].format("DD")));
@@ -23,7 +23,6 @@ function VilaSingleMain({ calendarDate, setCalendarDate }) {
       parseInt(toEnDigit(calendarDate[1].format("DD"))) -
       parseInt(toEnDigit(calendarDate[0].format("DD")));
   }
-  console.log({ 1: nights, 2: calendarDate });
   return (
     <div>
       <h2>{vilaInfo.title}</h2>
@@ -56,7 +55,11 @@ function VilaSingleMain({ calendarDate, setCalendarDate }) {
             پاک کردن تاریخ ها
           </span>
         </div>
-        <CustomCalendar value={calendarDate} onValueChange={setCalendarDate} />
+        <CustomCalendar
+          value={calendarDate}
+          onValueChange={setCalendarDate}
+          bookedDays={vilaInfo.bookedDays}
+        />
       </div>
     </div>
   );

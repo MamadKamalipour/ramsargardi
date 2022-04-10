@@ -9,7 +9,7 @@ import weekends from "react-multi-date-picker/plugins/highlight_weekends";
 import "react-multi-date-picker/styles/layouts/mobile.css";
 import "./CustomDatePicker.scss";
 import { toEnDigit } from "../../utils/functions";
-function CustomDatePicker({ value, onValueChange }) {
+function CustomDatePicker({ value, onValueChange, bookedDays }) {
   const weekDays = [
     "شنبه",
     "یکشنبه",
@@ -29,14 +29,11 @@ function CustomDatePicker({ value, onValueChange }) {
     });
   };
 
-
-
   const date = new DateObject({
     date: new Date(),
     calendar: persian,
     locale: persian_en,
   });
-  const bookedDays = ["1401/01/15", "1401/01/21", "1401/01/18", "1401/01/25"];
   let newBookedDays;
   newBookedDays = bookedDays.filter((day) => {
     if (day >= date.format("YYYY/MM/DD")) return day.toFaDigit();
@@ -65,7 +62,7 @@ function CustomDatePicker({ value, onValueChange }) {
   }
   return (
     <DatePicker
-    className="custom-datepicker"
+      className="custom-datepicker"
       render={<CustomRangeInput />}
       minDate={new DateObject({ calendar: persian }).set(
         "day",
