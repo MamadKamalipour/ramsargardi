@@ -6,11 +6,12 @@ import persian from "react-date-object/calendars/persian";
 import persian_fa from "react-date-object/locales/persian_fa";
 import persian_en from "react-date-object/locales/persian_en";
 import weekends from "react-multi-date-picker/plugins/highlight_weekends";
-import "./CustomCalendar.scss";
 import { toEnDigit } from "../../utils/functions";
+import "./CustomCalendar.scss";
 function CustomCalendar({ value, onValueChange, bookedDays }) {
   const normalDayPrice = 1500;
   const fridayPrice = 2000;
+
   const weekDays = [
     "شنبه",
     "یکشنبه",
@@ -37,7 +38,8 @@ function CustomCalendar({ value, onValueChange, bookedDays }) {
   });
   let newBookedDays;
   newBookedDays = bookedDays.filter((day) => {
-    if (day >= date.format("YYYY/MM/DD")) return day.toFaDigit();
+    if (day.locale("fa").format("YYYY/MM/DD") >= date.format("YYYY/MM/DD"))
+      return day.locale("fa").format("YYYY/MM/DD").toFaDigit();
   });
   const onChangeHandler = (e) => {
     let start = e[0];
@@ -63,9 +65,11 @@ function CustomCalendar({ value, onValueChange, bookedDays }) {
       plugins={[weekends()]}
       mapDays={({ date }) => {
         let isWeekend = date.weekDay.index === 6;
-        let isBooked = newBookedDays.includes(
-          toEnDigit(date.format("YYYY/MM/DD"))
+        let isBooked = newBookedDays.find(
+          (days) =>
+            days.format("YYYY/MM/DD") === toEnDigit(date.format("YYYY/MM/DD"))
         );
+
         if (isBooked)
           return {
             disabled: true,

@@ -36,7 +36,8 @@ function CustomDatePicker({ value, onValueChange, bookedDays }) {
   });
   let newBookedDays;
   newBookedDays = bookedDays.filter((day) => {
-    if (day >= date.format("YYYY/MM/DD")) return day.toFaDigit();
+    if (day.locale("fa").format("YYYY/MM/DD") >= date.format("YYYY/MM/DD"))
+      return day.locale("fa").format("YYYY/MM/DD").toFaDigit();
   });
   const onChangeHandler = (e) => {
     let start = e[0];
@@ -80,8 +81,9 @@ function CustomDatePicker({ value, onValueChange, bookedDays }) {
       calendarPosition={"bottom"}
       plugins={[weekends()]}
       mapDays={({ date }) => {
-        let isBooked = newBookedDays.includes(
-          toEnDigit(date.format("YYYY/MM/DD"))
+        let isBooked = newBookedDays.find(
+          (days) =>
+            days.format("YYYY/MM/DD") === toEnDigit(date.format("YYYY/MM/DD"))
         );
 
         if (isBooked)
@@ -102,6 +104,16 @@ function CustomDatePicker({ value, onValueChange, bookedDays }) {
               </div>
             ),
           };
+
+        return {
+          children: (
+            <>
+              <div className="custom-day-wrapper">
+                <p className="custom-day">{date.format("D")}</p>
+              </div>
+            </>
+          ),
+        };
       }}
       hideYear
       disableYearPicker

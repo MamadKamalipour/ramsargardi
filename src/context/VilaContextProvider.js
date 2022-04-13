@@ -1,3 +1,4 @@
+import moment from "jalali-moment";
 import React, { useState, useEffect, createContext } from "react";
 export const VilaContext = createContext({});
 function VilaContextProvider({ children }) {
@@ -21,7 +22,7 @@ function VilaContextProvider({ children }) {
       price: "730000",
       priceWithDiscount: "500000",
       isVerified: true,
-      bookedDays: ["1401/01/31", "1401/01/21", "1401/01/25", "1401/01/26"],
+      bookedDays: [moment("2022/04/16"),moment("2022/04/20"),moment("2022/04/22"),moment("2022/04/24")],
       owner:"person1",
 
       discountPresentage: 20,
@@ -127,7 +128,7 @@ function VilaContextProvider({ children }) {
       price: "730000",
       priceWithDiscount: "500000",
       isVerified: true,
-      bookedDays: ["1401/01/15", "1401/01/21", "1401/01/18", "1401/01/25"],
+      bookedDays:  [moment("2022/04/16"),moment("2022/04/20"),moment("2022/04/22"),moment("2022/04/24")],
       owner:"person2",
 
       discountPresentage: 20,
@@ -233,7 +234,7 @@ function VilaContextProvider({ children }) {
       price: "730000",
       priceWithDiscount: "500000",
       isVerified: true,
-      bookedDays: ["1401/01/30", "1401/01/22", "1401/01/25", "1401/01/27"],
+      bookedDays: [moment("2022/04/16"),moment("2022/04/20"),moment("2022/04/22"),moment("2022/04/24")],
       owner:"person1",
       discountPresentage: 20,
       feature: [
@@ -338,7 +339,7 @@ function VilaContextProvider({ children }) {
       price: "730000",
       priceWithDiscount: "500000",
       isVerified: false,
-      bookedDays: ["1401/01/15", "1401/01/21", "1401/01/18", "1401/01/25"],
+      bookedDays:  [moment("2022/04/16"),moment("2022/04/20"),moment("2022/04/22"),moment("2022/04/24")],
       owner:"person2",
 
       discountPresentage: 0,
@@ -444,7 +445,7 @@ function VilaContextProvider({ children }) {
       price: "730000",
       priceWithDiscount: "500000",
       isVerified: false,
-      bookedDays: ["1401/01/15", "1401/01/21", "1401/01/18", "1401/01/25"],
+      bookedDays:  [moment("2022/04/16"),moment("2022/04/20"),moment("2022/04/22"),moment("2022/04/24")],
       owner:"person1",
 
       discountPresentage: 20,
@@ -550,7 +551,7 @@ function VilaContextProvider({ children }) {
       price: "730000",
       priceWithDiscount: "500000",
       isVerified: false,
-      bookedDays: ["1401/01/15", "1401/01/21", "1401/01/18", "1401/01/25"],
+      bookedDays:  [moment("2022/04/16"),moment("2022/04/20"),moment("2022/04/22"),moment("2022/04/24")],
       owner:"person2",
 
       discountPresentage: 0,
@@ -656,7 +657,7 @@ function VilaContextProvider({ children }) {
       price: "730000",
       priceWithDiscount: "500000",
       isVerified: false,
-      bookedDays: ["1401/01/15", "1401/01/21", "1401/01/18", "1401/01/25"],
+      bookedDays: [moment("2022/04/16"),moment("2022/04/20"),moment("2022/04/22"),moment("2022/04/24")],
       owner:"person1",
 
       discountPresentage: 20,
@@ -762,7 +763,7 @@ function VilaContextProvider({ children }) {
       price: "730000",
       priceWithDiscount: "500000",
       isVerified: false,
-      bookedDays: ["1401/01/15", "1401/01/21", "1401/01/18", "1401/01/25"],
+      bookedDays: [moment("2022/04/16"),moment("2022/04/20"),moment("2022/04/22"),moment("2022/04/24")],
       owner:"person2",
 
       discountPresentage: 0,
