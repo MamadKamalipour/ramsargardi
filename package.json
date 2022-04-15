@@ -25,6 +25,7 @@
     "enzyme-shallow-equal": "^1.0.4",
     "formik": "^2.2.9",
     "is-touch-device": "^1.0.1",
+    "jalali-moment": "^3.3.11",
     "lodash": "^4.1.1",
     "moment": "^2.29.1",
     "object.assign": "^4.1.2",

@@ -4,7 +4,7 @@ import CustomDatePicker from "../CustomDatePicker/CustomDatePicker";
 import CustomRadioButton2 from "../CustomRadioButton2/CustomRadioButton2";
 import { VilaContext } from "../../context/VilaContextProvider";
 import CustomButton from "../CustomButton/CustomButton";
-import starSvg from "../../assets/image/star.svg"
+import starSvg from "../../assets/image/star.svg";
 import "./VilaSingleSideBar.scss";
 function VilaSingleSidbar({ calendarDate, setCalendarDate }) {
   const location = useLocation();
@@ -36,9 +36,6 @@ function VilaSingleSidbar({ calendarDate, setCalendarDate }) {
     setPeopleNumValue(num);
   };
 
-
-
-
   return (
     <div className="sidebar__card">
       {vilaInfo.discountPresentage !== 0 ? (
@@ -54,8 +51,8 @@ function VilaSingleSidbar({ calendarDate, setCalendarDate }) {
       <div className="sidebar__card__header">
         <span className="price">{vilaInfo.priceWithDiscount} تومان / هرشب</span>
         <div className="rating">
-        <img src={starSvg} alt="starSvg" />
-            <p>{vilaInfo.rating}</p>
+          <img src={starSvg} alt="starSvg" />
+          <p>{vilaInfo.rating}</p>
         </div>
       </div>
 

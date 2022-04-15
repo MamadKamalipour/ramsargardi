@@ -6,8 +6,14 @@ import { UserContext } from "../../context/UsersContextProvider";
 import { toEnDigit } from "../../utils/functions";
 import CustomCalendar from "../CustomCalendar/CustomCalendar";
 import VilaFeatuers from "../VilaFeatuers/VilaFeatuers";
-import HostInfoCard from "../HostInfoCard/HostInfoCard"
+import gregorian from "react-date-object/calendars/gregorian";
+import gregorian_en from "react-date-object/locales/gregorian_en";
+import persian from "react-date-object/calendars/persian";
+import persian_fa from "react-date-object/locales/persian_fa";
+import HostInfoCard from "../HostInfoCard/HostInfoCard";
+import moment from "moment";
 import "./VilaSingleMain.scss";
+import { DateObject } from "react-multi-date-picker";
 function VilaSingleMain({ calendarDate, setCalendarDate }) {
   const location = useLocation();
   const { vilaData } = useContext(VilaContext);
@@ -15,21 +21,33 @@ function VilaSingleMain({ calendarDate, setCalendarDate }) {
   const vilaInfo = vilaData.find((vila) => vila.id === parseInt(id));
   const { users } = useContext(UserContext);
   const owenerInfo = users.find((user) => user.userName === vilaInfo.owner);
-  let nights = 0;
-
+  let startDate;
+  let endDate;
+  if (calendarDate.length === 2) {
+    startDate = calendarDate[1]
+      .convert(gregorian, gregorian_en)
+      .format("YYYY/MM/DD");
+    endDate = calendarDate[0]
+      .convert(gregorian, gregorian_en)
+      .format("YYYY/MM/DD");
+  }
+  let nights = [];
+  if (nights.length === 0) {
+    nights = 0;
+  }
   if (calendarDate.length === 1) {
     nights = parseInt(toEnDigit(calendarDate[0].format("DD")));
   }
   if (calendarDate.length > 1) {
     nights =
-      parseInt(toEnDigit(calendarDate[1].format("DD"))) -
-      parseInt(toEnDigit(calendarDate[0].format("DD")));
+      moment.duration(moment(startDate).diff(moment(endDate))).asDays() - 1;
   }
+
   return (
     <div>
       <h2>{vilaInfo.title}</h2>
       <p>به میزبانی {owenerInfo.fullName}</p>
-      <HostInfoCard data={owenerInfo}/>
+      <HostInfoCard data={owenerInfo} />
       <VilaFeatuers vilaOptions={vilaInfo.feature} />
       <div className="p-3">
         <div className="d-flex justify-content-between align-items-center mb-3">
@@ -38,11 +56,15 @@ function VilaSingleMain({ calendarDate, setCalendarDate }) {
             {nights === 0 ? (
               ""
             ) : nights === 1 ? (
-              <span>{calendarDate[0].format("DD MMMM")}</span>
+              <span>
+                {calendarDate[0].convert(persian, persian_fa).format("DD MMMM")}
+              </span>
             ) : (
-              <span>{`${calendarDate[0].format(
-                "DD MMMM"
-              )} تا ${calendarDate[1].format("DD MMMM")}`}</span>
+              <span>{`${calendarDate[0]
+                .convert(persian, persian_fa)
+                .format("DD MMMM")} تا ${calendarDate[1]
+                .convert(persian, persian_fa)
+                .format("DD MMMM")}`}</span>
             )}
           </div>
           <span className="clear-dates" onClick={() => setCalendarDate([])}>
